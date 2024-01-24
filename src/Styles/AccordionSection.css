@@ -1,0 +1,15 @@
+.forparent{
+    border: 2px solid green;
+    display: grid;
+    grid-template-columns: 800px 400px ;
+    grid-template-rows: 100px 600px;
+}
+.headingpart{
+grid-column-start: 1;
+grid-column-end: 2;
+ text-align: end;
+}
+
+.qsigneimgpart{
+
+}

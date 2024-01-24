@@ -1,0 +1,70 @@
+.bgcolor {
+  background: #f4f9ec;
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+}
+.workdata {
+  padding-top: 15px;
+}
+.card {
+  width: 651px;
+  height: auto;
+  padding-bottom: 5px;
+  flex-shrink: 0;
+  border-radius: 7px;
+  /* background: #FFF; */
+}
+.subcircle {
+  border-radius: 31.5px;
+  background: #f4f9ec;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1 !important;
+}
+.quantity {
+  color: #92c43e;
+  font-family: "Source Serif Pro";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.title {
+  font-family: "Source Serif Pro";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.titleInfo {
+  color: #a5a7a5 !important;
+}
+ 
+
+.vertical-line {
+    border-left: 1px solid #92c43e;
+    position: absolute;
+    left: 30px;
+    height: 40px !important;
+    z-index: 0;
+}
+
+@media only screen and (min-width: 220px) and (max-width: 320px) {
+    .vertical-line {
+        height: 180px  ;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 375px) {
+    .vertical-line {
+        height: 120px  ;
+    }
+}
+
+    

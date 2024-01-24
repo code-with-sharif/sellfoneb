@@ -1,0 +1,30 @@
+
+ 
+ .logoimg {
+   width: 250px !important;
+   height: 80px !important;
+  flex-shrink: 0px !important;
+ }
+ .custominput {
+  font-size: 14px !important;
+  height: 55px !important;
+  width: auto !important;  
+
+  /* On lg devices, set the width to 500px */
+  @media (min-width: 992px) {
+     width: 500px !important;
+  }
+}
+
+ .serahicon{
+   width: 20px !important;
+   height: 20px !important;
+ }
+ 
+
+ .headerimg {
+   width: 55px !important;
+   height: 55px !important;
+
+ }
+ 
