@@ -67,6 +67,22 @@
   .why-us .accordion-list a.collapsed .icon-close {
     display: none;
   }
+  /* .acordionsigne{
+    
+  } */
+
+  .acordionsigne{
+    width: 22px;
+    height: 22px; 
+    flex-shrink: 0;
+    text-align: center;
+    color: white;
+    
+    background-color: #92C43E;
+    border-radius: 100%;
+    font-size: larger;
+    font-weight: bolder;
+      }
   
   @media (max-width: 1024px) {
   

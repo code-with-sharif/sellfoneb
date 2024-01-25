@@ -7,14 +7,28 @@ import "../../Styles/Header.css";
 import CustomButton from "../../CommonComponents/CustomButton";
 import searcicon from "../../Images/Home/Header/serach_icon.svg";
 import caretdon from "../../Images/Home/Header/CaretDown.svg";
+import Navbar from "./Navbar";
 const Header = () => {
   return (
     <>
-      <main>
+      <main className="">
         <div className="mx-5 ">
+
+
           <div className=" d-flex align-items-center    justify-content-around flex-lg-nowrap  flex-wrap gap-3">
-            <div className="  logoimg  ">
-              <img   style={{ width: "100%", height: "100%", objectFit: "cover" }} className="img-fluid  " src={log} alt="Logo" />
+
+
+            <div className="    d-flex  aligne logoimg  ">
+     <div className="pt-1 me-2">
+           <Navbar  />
+     </div>
+
+              <img
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                className="img-fluid  "
+                src={log}
+                alt="Logo"
+              />
             </div>
             <div className="   ">
               <form action="">
@@ -34,24 +48,47 @@ const Header = () => {
                 </div>
               </form>
             </div>
+
             {/* Button part  */}
+
             <div className=" d-flex  align-items-center gap-2  ">
               <div className="headerimg">
                 <img className="img-fluid" src={img} alt="" />
               </div>
-              <div 
-              style={{cursor:"pointer"}}
-              className=" ">
-               
-              <img className=" " src={caretdon} alt="" />
+
+              {/* dropdown item */}
+
+              <img
+  className=""
+  src={caretdon}
+  alt=""
+  data-bs-toggle="dropdown"
+  style={{cursor:"pointer",  }}
+/>
 
 
-              </div>
+<ul style={{ position: "absolute", top: "30px" }} className=" mt-3 dropdown-menu dropdown-menu-start dropdown-menu-lg-end">
+  <li>
+    <a className="dropdown-item" href="#">
+      My Account
+    </a>
+  </li>
+  <li>
+    <a className="dropdown-item mt-2" href="#">
+      My Adverts
+    </a>
+  </li>
+  <hr className="mx-3" />
+  <li>
+    <a className="dropdown-item" style={{ color: "#92C43E" }} href="#">
+      Sign Out
+    </a>
+  </li>
+</ul>
+
 
               <div>
-               
                 <CustomButton className="btn" text="Post An Advert" />
-
               </div>
             </div>
           </div>

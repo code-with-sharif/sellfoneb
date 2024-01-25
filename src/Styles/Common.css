@@ -97,9 +97,11 @@ p {
 }
 
 .btn:hover {
-  color: #92c43e !important;
-  background-color: #f1f7e6 !important;
+  color: #759D32 !important;
+  /* background-color: #f1f7e6 !important; */
   border: 2px solid #92c43e; /* Change the border color on hover */
+  color: #000 !important;
+
 }
 
 .buttoncolor
@@ -114,8 +116,8 @@ p {
 }
 
 .buttoncolor:hover {
-  background-color: #92c43e !important;
-  color: #fff !important;
+  background-color: #759D32 !important;
+  color: #000 !important;
 }
 
 a {

@@ -10,21 +10,25 @@ import CustomAccordion from './CommonComponents/CustomAccordion'
 import Herosection from './Components/Home/Herosection'
 import WorksSection from './Components/Home/WorksSection'
 import AccordionSection from './Components/Home/AccordionSection'
+import Footer from './Components/Footer'
+import Navbar from './Components/Home/Navbar'
  
  
 const App = () => {
   return (
  <>
-  <Header />
-  <Herosection /> 
-  <ChooseUs /> 
+  <Header /> 
+  
+    <Herosection />  
+   <ChooseUs /> 
   <WorksSection />
-  <SellmobilePhone />
-  <RecommededMobil />  
+  <SellmobilePhone />  
+  <RecommededMobil />   
  
   <AccordionSection /> 
    <Sellphonesafly/>
   <Needquestion/>
+  <Footer />
 
  </>
   )

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Styles/CustomAccordion.css";
-
+import { FaPlus } from "react-icons/fa6";
+import { RxCross2 } from "react-icons/rx";
 const accordionData = [
   {
     id: 1,
@@ -35,30 +36,42 @@ const accordionData = [
 ];
 
 const CustomAccordion = () => {
+  const [openAccordionId, setOpenAccordionId] = useState(null);
+
+  const handleAccordionToggle = (accordionId) => {
+    setOpenAccordionId(openAccordionId === accordionId ? null : accordionId);
+  };
+
   return (
-    <section style={{ paddingTop:"20px" }}>
+    <section style={{ paddingTop: "20px" }}>
       <div>
         <section id="why-us" className="why-us section-bg">
           <div className="container-fluid" data-aos="fade-up">
             <div className="row accordionwidth">
-              <div className=" d-flex flex-column justify-content-center align-items-stretch ">
+              <div className="d-flex flex-column justify-content-center align-items-stretch">
                 <div className="accordion-list">
                   <ul>
-                    {accordionData.map((item, index) => (
-                      <li key={index}>
+                    {accordionData.map((item) => (
+                      <li key={item.id}>
                         <a
-                          data-bs-toggle="collapse"
-                          className="collapse"
-                          data-bs-target={`#accordion-list-${item.id}`}
+                          onClick={() => handleAccordionToggle(item.id)}
+                          className={`collapse ${openAccordionId === item.id ? 'show' : ''}`}
                         >
-                          <span style={{ color: "#A5A7A5" }} className="">{item.quantity}</span><span className="thirdheading " style={{color:" "}}> {item.question}</span>
+                          <div className="d-flex gap-2 justify-content-between">
+                          <div>
+                          <span style={{ color: "#A5A7A5" }}>{item.quantity}</span>
+                          <span className="thirdheading" style={{ color: "" }}>{item.question}</span>
+                          </div>
+                          {/* positive and nagitive signe */}
+                          <div className="  acordionsigne">
+                            {openAccordionId === item.id ? <RxCross2 /> : <FaPlus />}
+                          </div>
+                          </div>
                         </a>
                         <div
-                          id={`accordion-list-${item.id}`}
-                          className="collapse "
-                          data-bs-parent=".accordion-list"
+                          className={`collapse ${openAccordionId === item.id ? 'show' : ''}`}
                         >
-                          <p className="" style={{color:"#A5A7A5"}}>{item.answer}</p>
+                          <p className="" style={{ color: "#A5A7A5" }}>{item.answer}</p>
                         </div>
                       </li>
                     ))}

@@ -3,6 +3,7 @@
 import React from "react";
 import Recomendmobilecard from "../../CommonComponents/Recomendmobilecard";
 import productcardimg from "../../Images/Home/RecomendedphoneSection/Rectangle 63 (1).png";
+ 
 
 const RecommededMobil = () => {
   const recomendmobile = [
@@ -122,7 +123,7 @@ const RecommededMobil = () => {
     },
     {
       imgSrc: productcardimg,
-      title: "Samsung Galaxy S21",
+      title: "Apple iPhone 13",
       price: "Rs. 1,23,456",
       buttonLabel: "Quick View",
     },
@@ -140,7 +141,7 @@ const RecommededMobil = () => {
 
           {/* Card section */}
           <div className="container">
-            <div className="row row-cols-2   row-cols-lg-5">
+            <div className="row row-cols-sm-2   row-cols-lg-5">
               {recomendmobile.map((item, index) => (
                 <div key={index} className="col mb-4">
                   <Recomendmobilecard

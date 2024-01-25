@@ -27,4 +27,22 @@
    height: 55px !important;
 
  }
+
+ .dropdown-item{
+  color: #212221;
+font-family: Roboto;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+width: 90px !important;
+padding-left: 0% !important;
+margin-left: 20px !important;
+/* border: 2px solid red !important; */
+
+
+}
+ .dropdown-item:hover{
+  background: none !important;
+ }
  

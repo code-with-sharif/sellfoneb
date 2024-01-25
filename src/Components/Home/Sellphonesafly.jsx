@@ -7,7 +7,7 @@ const Sellphonesafly = () => {
       <section style={{paddingTop:"60px", paddingBottom:"60px"}}>
         <div className="container">
           <div className=" row gap-4">
-            <div className="col-12 col-lg-6">
+            <div className="col-12 col-lg-6  ">
               <div className="heading pb-3">
                 <span className="seconderyColor">Sell ​​your phone </span>
                 <span className="tertiaryColor">safely and quickly</span>
@@ -35,7 +35,7 @@ const Sellphonesafly = () => {
               </p>
             </div>
             <div className="col-12 col-lg-4   " style={{width:"600px"}}>
-                <div style={{ }} className="sellphoneimg  mx-auto">
+                <div style={{ }} className="sellphoneimg  mx-auto  ">
                     <img className="img-fluid" src={sellphone}style={{objectFit:"cover", maxWidth:"100%"}} alt="sell phone image not show" />
                 </div>
             </div>

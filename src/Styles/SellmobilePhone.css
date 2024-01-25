@@ -1,0 +1,21 @@
+.custom-tab {
+    /* flex: 1; */
+    text-align: center;
+    padding: 10px; /* Adjust the padding as needed */
+  }
+ 
+
+.custom-tab {
+    background-color: transparent !important; /* Remove background */
+    border: none !important; /* Remove border */
+    border-bottom: none !important; /* Remove bottom horizontal line */
+    color: inherit !important; /* Preserve text color */
+    color: red;
+  }
+  
+  /* Override the active tab style */
+  .custom-tab.active {
+    background-color: transparent !important;
+  }
+  
+   

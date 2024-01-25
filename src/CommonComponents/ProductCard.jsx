@@ -14,7 +14,7 @@ const ProductCard = ({ cardData }) => {
       <div className="container p-lg-0 px-4">
         <div className="row row-cols-lg-3 row-cols-md-1 row-cols-1 gap-lg-3  ">
           {cardData.map((cardItem, id) => (
-            <div key={id} className="icon-box mt-4  ">
+            <div key={id} className="ChooseUscard mt-4  ">
               <div className="Icon-img">
                 <img
                   className="img-fluid"
@@ -28,8 +28,8 @@ const ProductCard = ({ cardData }) => {
                 />
               </div>
           <div className="">
-          <h4 className="subheading mt-4 p-lg-0 ">{cardItem?.title}</h4>
-              <p className="px-3">{cardItem?.description}</p>
+          <h4 className="subheading mt-4 p-lg-0 ">{cardItem?.title} {cardItem?.deviceName}</h4>
+              <p className="px-3"><span>{cardItem?.description}</span><span style={{color:"#92C43E"}} className="">{cardItem?.deviceLink} </span></p>
           </div>
             </div>
           ))}

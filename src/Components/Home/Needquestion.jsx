@@ -52,9 +52,9 @@ const Needquestion = () => {
                     />
                   </div>
                 </div>
-                <div>
+                <div style={{}} className=" ">
                   <h5 className="subheading"> Email Address</h5>
-                   <p> loremipsum123@gmail.com</p>
+                   <p className="   text-break  "> loremipsum123@gmail.com</p>
                 </div>
               </div>
             </div>

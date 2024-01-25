@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import "../../Styles/HeroSection.css";
 import herosectionimg1 from "../../Images/Home/Herosection/heroSection_img1.png";
 import herosectionimg2 from "../../Images/Home/Herosection/heroSection_img2.png";
@@ -13,25 +13,25 @@ const Herosection = () => {
 
   return (
     <>
-      <main className='heroheader'>
+      <main className="heroheader">
         <div className="container-fluid p-4">
-          <div className="row">
+          <div className="row gap-lg-0 gap-5">
             {/* First column */}
-            <div className="col-lg-3 ">
-              <div className=" " style={{ width: "350px", height: "390px" }}>
+            <div className="col-lg-3 order-lg-1 order-2">
+              <div className=" herosectionimg1" style={{ width: "350px", height: "390px" }}>
                 <img className="img-fluid" src={herosectionimg1} alt="" />
               </div>
             </div>
 
             {/* Text part */}
-            <div className="col-lg-5">
+            <div className="col-lg-5 order-lg-2 order-1">
               <div className=" ">
                 <h1 className="heading headingStyle">
                   Sell & Buy your mobile phone safely and quickly
                 </h1>
                 <p className="heroparagraph">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
                 <div className="d-flex justify-content-center gap-3">
                   {buttonData.map((button) => (
@@ -55,8 +55,8 @@ const Herosection = () => {
             </div>
 
             {/* Second column */}
-            <div className="col-lg-3">
-              <div className=" " style={{ width: "390px", height: "390px" }}>
+            <div className="col-lg-3 order-lg-3 order-3">
+              <div className=" herosectionimg2" style={{ width: "390px", height: "390px" }}>
                 <img className="img-fluid" src={herosectionimg2} alt="" />
               </div>
             </div>
@@ -65,6 +65,6 @@ const Herosection = () => {
       </main>
     </>
   );
-}
+};
 
 export default Herosection;

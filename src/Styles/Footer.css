@@ -1,0 +1,131 @@
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+    font-size: 14px;
+    background: white;
+  }
+.logoimg{
+    width: 250.276px;
+height: 80px;
+flex-shrink: 0;
+}
+.footerText{
+    padding-top: 30px !important;
+    padding-bottom: 10px !important;
+    padding-right: 120px !important;
+}
+  #footer .footer-top {
+    padding: 60px 0 30px 0;
+    background: #fff;
+  }
+  
+  #footer .footer-top .footer-contact {
+    margin-bottom: 30px;
+  }
+  
+  #footer .footer-top .footer-contact h3 {
+    font-size: 28px;
+    margin: 0 0 10px 0; 
+     padding: 2px 0 2px 0;
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #37517e;
+  }
+  
+  #footer .footer-top .footer-contact p {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 0;
+    font-family: "Jost", sans-serif;
+    color: #5e5e5e;
+  }
+  
+  #footer .footer-top h6 {
+    color: #212221;
+font-family: "Source Serif Pro";
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+    position: relative;
+    padding-bottom: 12px;
+  }
+  
+  #footer .footer-top .footer-links {
+    margin-bottom: 30px;
+    
+  }
+  
+  #footer .footer-top .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+   
+  #footer .footer-top .footer-links ul li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  #footer .footer-top .footer-links ul li:first-child {
+    padding-top: 0;
+  }
+  
+  #footer .footer-top .footer-links ul a {
+    color: #212221;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: 0.3s;
+    display: inline-block;
+    line-height: 1;
+  }
+  
+   
+  #footer .footer-top .social-links {
+    display: flex;
+    gap: 8px; /* Adjust the gap as needed */
+}
+
+#footer .footer-top .social-links a {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #92C43E;
+    color: #fff;
+    line-height: 1;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+
+ 
+ 
+  
+  @media (max-width: 767px) {
+    .footerText{
+        padding-top: 30px !important;
+        padding-bottom: 10px !important;
+        padding-right: 0px !important;
+    }
+    .navigationpart{
+
+      width: 40% !important;   
+     }
+    .companypart{
+
+      width: 60% !important;   
+      
+     }
+
+  }
