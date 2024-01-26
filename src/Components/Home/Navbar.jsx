@@ -48,7 +48,7 @@ const Navbar = () => {
         <nav style={{ left: showNavbar ? 0 : '-100%'  ,
         
                            }}>
-          <a href="#home">Home</a>
+          <a href="/">Home</a>
           <hr />
           <a href="#about">Process</a>
           <hr />
