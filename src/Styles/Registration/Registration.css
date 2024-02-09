@@ -1,0 +1,15 @@
+.nametext{
+    font-family: "Source Serif Pro";
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6;
+  font-size: 16px;
+}
+.registrationheading{
+    margin-top: 0px !important;
+    font-family: "Source Serif Pro";
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.6;
+    font-size: 40px;
+}

@@ -1,0 +1,13 @@
+.sellphoneCArd {
+    width: 25%;
+    text-align: center;
+    padding: 15px 60px;
+    /* border: 2px solid red; */
+}
+
+@media(max-width: 992px) {
+    .sellphoneCArd {
+        width: 100%;
+        /* margin-bottom: 20px; Add margin to create space between cards on small screens */
+    }
+}

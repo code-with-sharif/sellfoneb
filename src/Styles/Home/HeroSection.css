@@ -1,0 +1,70 @@
+.heroheader {
+  background: radial-gradient(
+    43.22% 61.13% at 50.14% 49.94%,
+    #f4f9ec 0%,
+    #deedc5 100%
+  );
+  width: 100% !important;
+  height: auto !important;
+  padding-bottom: 5px !important;
+}
+ 
+.headingStyle {
+  text-align: center;
+  padding-top: 90px;
+}
+
+ 
+
+.rating {
+  color: #212221;
+
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.review {
+  color: #212221;
+
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.herosectionimg1{
+  width: 30%;
+  height: auto;
+   
+
+}
+.herosectionimg2{
+  width: 27%;
+  height: auto;
+}
+@media (max-width: 992px) {
+  .headingStyle{
+    margin-top: 4px !important;
+  }
+.herosectionimg2{
+    width: 50%;
+    margin-right: auto;
+    margin-top: 30px;
+
+}
+.herosectionimg1{
+      width: 50%;
+    margin-right: auto;
+    margin-top: 30px;
+     
+}
+.headingStyle {
+  text-align: center;
+  padding-top: 0px;
+}
+
+
+}

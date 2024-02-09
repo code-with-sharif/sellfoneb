@@ -1,0 +1,11 @@
+.brandcheckbox {
+    display: none;}
+.brand-icon{
+    cursor: pointer;
+}
+.brand-icon:hover + .brandcheckbox,
+.brandcheckbox:hover {
+    display: block;
+    transition: 1s ease-in-out; /* Adding transition for smooth effect */
+}
+ 

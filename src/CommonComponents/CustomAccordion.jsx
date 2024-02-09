@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../Styles/CustomAccordion.css";
+import "../Styles/Home/CustomAccordion.css";
 import { FaPlus } from "react-icons/fa6";
 import { RxCross2 } from "react-icons/rx";
 const accordionData = [
@@ -45,7 +45,7 @@ const CustomAccordion = () => {
   return (
     <section style={{ paddingTop: "20px" }}>
       <div>
-        <section id="why-us" className="why-us section-bg">
+        <section id="why-us" className="why-us border w-100">
           <div className="container-fluid" data-aos="fade-up">
             <div className="row accordionwidth">
               <div className="d-flex flex-column justify-content-center align-items-stretch">
@@ -60,11 +60,11 @@ const CustomAccordion = () => {
                           <div className="d-flex gap-2 justify-content-between">
                           <div>
                           <span style={{ color: "#A5A7A5" }}>{item.quantity}</span>
-                          <span className="thirdheading" style={{ color: "" }}>{item.question}</span>
+                          <span className=" acordiontitle" style={{ color: "" }}>{item.question}</span>
                           </div>
                           {/* positive and nagitive signe */}
                           <div className="  acordionsigne">
-                            {openAccordionId === item.id ? <RxCross2 /> : <FaPlus />}
+                            {openAccordionId === item.id ? <RxCross2 style={{marginBottom: '3px'}}/> : <FaPlus style={{marginBottom: '3px'}}/>}
                           </div>
                           </div>
                         </a>
@@ -79,13 +79,7 @@ const CustomAccordion = () => {
                 </div>
               </div>
 
-              <div
-                className="col-lg-5 a img"
-                data-aos="zoom-in"
-                data-aos-delay="150"
-              >
-                &nbsp;
-              </div>
+             
             </div>
           </div>
         </section>

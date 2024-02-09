@@ -1,0 +1,88 @@
+.ChooseUscard {
+  padding: 30px 30px;
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 0px 2px 7px 3px rgba(0, 0, 0, 0.04);
+  width: 350px;
+  height: auto;
+  text-align: center;
+  justify-content: center;
+}
+.ChooseUscardImg{
+  width: 15%;
+  height: auto;
+  margin: 0 auto;
+  
+}
+.sellmobilephonecard {
+  padding: 20px 0px 0px 0px !important;
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 0px 2px 7px 3px rgba(0, 0, 0, 0.04);
+  width: 18%;
+ /* border: 2px solid red; */
+ 
+ 
+  height: auto;
+  text-align: center;
+ 
+}
+
+.sellmobilephoneImg{
+  width:100% !important;
+   height: auto;
+  margin: 0 auto !important;
+  /* border: 2px solid red; */
+ padding-top: 0px !important;
+}
+
+.recomendmobile {
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 0px 2px 7px 3px rgba(0, 0, 0, 0.04);
+  text-align: start;
+}
+ 
+.SellphoneQuicklycard{
+  padding: 40px  30px 10px 30px;
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 0px 2px 7px 3px rgba(0, 0, 0, 0.04);
+  width: 20%;
+  height: auto;
+  text-align: center;
+  justify-content: center;
+}
+ 
+
+@media (max-width: 991px) {
+  .ChooseUscard {
+    padding: 40px 30px;
+    border-radius: 7px;
+    background: #fff;
+    box-shadow: 0px 2px 7px 3px rgba(0, 0, 0, 0.04);
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+  width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+ 
+
+  .sellmobilephonecard {
+    width: 45%;
+  
+  }
+  .sellmobilephoneImg{
+    width: 100%;
+  }
+  .SellphoneQuicklycard{
+    width: 100%;
+  }
+}
+
+
+ 

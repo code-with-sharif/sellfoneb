@@ -1,0 +1,13 @@
+.contactTitle{
+    font-family: "Source Serif Pro";
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+@media(max-width:767){
+    .nameinput{
+        max-width: 30% !important;
+    }
+}

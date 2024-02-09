@@ -1,0 +1,36 @@
+.herobgcolor {
+    width: 100%;
+    background: radial-gradient(43.22% 61.13% at 50.14% 49.94%, #F4F9EC 0%, #DEEDC5 100%);
+    min-height: 300px;
+  
+}
+
+.heroheading{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 300px;
+    margin-left: 55px;    
+}
+.heroimg1{
+    width: 30%;
+   
+}
+@media (max-width: 991px) {
+    .herobgcolor{
+        padding-top: 60px;         
+    }
+
+    .contactheroheading{
+        text-align: center;
+        height: 250px !important;
+        margin: 0;
+        width: 100%;       
+    }
+
+
+    .heroimg1{
+        width: 100%;     
+      
+    }
+}

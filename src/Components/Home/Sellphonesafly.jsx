@@ -1,5 +1,5 @@
 import React from "react";
-import "../../Styles/Sellphonesafly.css";
+import "../../Styles/Home/Sellphonesafly.css";
 import sellphone from  '../../Images/Home/Sellphonesafely/Sellphone_img1.png'
 const Sellphonesafly = () => {
   return (
@@ -7,12 +7,12 @@ const Sellphonesafly = () => {
       <section style={{paddingTop:"60px", paddingBottom:"60px"}}>
         <div className="container">
           <div className=" row gap-4">
-            <div className="col-12 col-lg-6  ">
-              <div className="heading pb-3">
-                <span className="seconderyColor">Sell ​​your phone </span>
-                <span className="tertiaryColor">safely and quickly</span>
-              </div>
-              <p>
+            <div className="col-12 col-lg-6 sellfonetext  ">
+              <h1 className="text-center pb-3">
+                 Sell ​​your phone  
+                <span className="green">safely and quickly</span>
+              </h1>
+              <p className="">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -34,8 +34,8 @@ const Sellphonesafly = () => {
                 voluptatem.
               </p>
             </div>
-            <div className="col-12 col-lg-4   " style={{width:"600px"}}>
-                <div style={{ }} className="sellphoneimg  mx-auto  ">
+            <div className="col-12 col-lg-4 sellphoneimg  " style={{width:"600px"}}>
+                <div style={{ }} className="  mx-auto  ">
                     <img className="img-fluid" src={sellphone}style={{objectFit:"cover", maxWidth:"100%"}} alt="sell phone image not show" />
                 </div>
             </div>

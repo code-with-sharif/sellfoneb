@@ -31,14 +31,14 @@ const ChooseUs = () => {
     <>
       <section style={{paddingTop:"60px", paddingBottom:"60px"}} className="">
         <div className="text-center " >
-          <h4 className="heading">
-            <span className="seconderyColor">Why </span>
-            <span className="tertiaryColor">Choose Us</span>
-            <span className="seconderyColor">?</span>
-          </h4>
+          <h1 className=" ">
+           Why  
+            <span className="green px-1">Choose Us</span>
+            ? 
+          </h1>
           <p className="p-lg-0 px-2  mx-auto" style={{marginTop: "15px", maxWidth: "500px"}}>
-  At Sellfone.pk, our top priority is the safety and welfare of all mobile phones rehomed through our site.
-</p>
+       At Sellfone.pk, our top priority is the safety and welfare of all mobile phones rehomed through our site.
+     </p>
 
 
         </div>

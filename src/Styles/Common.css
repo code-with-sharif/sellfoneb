@@ -4,8 +4,19 @@
   box-sizing: border-box;
 }
 
-body {
+body, body > *{
   font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4;
+}
+p{
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4;
 }
 h1,
 h2,
@@ -13,7 +24,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Source Serif 4", serif !important;
+  font-family: "Source Serif Pro";
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6;
 }
 
 h1 {
@@ -21,103 +35,65 @@ h1 {
 }
 
 h2 {
-  font-size: 24px !important;
+  font-size: 32px !important;
 }
 
 h3 {
-  font-size: 14px !important;
+  font-size: 24px !important;
 }
-.primaryColor {
+
+h4 {
+  font-size: 20px !important;
+}
+
+h5 {
+  font-size: 18px !important;
+}
+
+h6 {
+  font-size: 16px !important;
+}
+
+.white {
   color: #fff;
 }
-.seconderyColor {
+.black {
   color: #000;
 }
-.tertiaryColor{
+.green {
   color: #92c43e;
 }
-.tertiaryBgcolor {
+.green-bg {
   background-color: #92c43e;
 }
-.tertiaryBgColor:hover {
+.green-bg:hover {
   color: #fff;
   background-color: #92c43e;
 }
-.heading {
-  font-family: "Source Serif 4";
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
+
+button, .btn {
+  font-size: 16px;
+  border-radius: 4px;
+  padding: 10px 35px;
+  height: 48px;
+  background: #92c43e;
+  color: #fff;
+  white-space: nowrap; 
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.subheading {
-  font-size: 24px !important;
-
-font-family: "Source Serif Pro";
-font-size: 16px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-
-}
-
-.thirdheading{
-  color: #212221;
-
-font-family: "Source Serif Pro";
-font-size: 16px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-
- }
-p {
-  font-size: 14px !important;
-  font-family: "Roboto", sans-serif !important;
-  font-style: normal !important;
-  font-weight: 400 !important;
-  line-height: 19.6px !important;
-}
-
-.btn {
-  font-size: 16px !important;
-  font-family: "Roboto", sans-serif !important;
-  font-style: normal !important;
-  font-weight: 500 !important;
-  line-height: normal !important;
-  border-radius: 7px;
-  color: #fff !important;
-  background-color: #92c43e !important;
-  padding: 16px !important;
-  width: auto;
-  white-space: nowrap;
-  border: 2px solid transparent; 
-  transition: background-color 0.3s ease, color 0.3s ease;  
-}
-
-.btn:hover {
-  color: #759D32 !important;
-  /* background-color: #f1f7e6 !important; */
-  border: 2px solid #92c43e; /* Change the border color on hover */
-  color: #000 !important;
-
-}
-
-.buttoncolor
- {
+.btn-white {
   color: #92c43e;
-  padding: 16px !important;
-  width: auto;
-  border-radius: 7px;
-  white-space: nowrap;
-  border: 2px solid #92c43e; /* Add transparent border initially */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Add transition for color changes */
+  border: 1px solid #92c43e;
+  background: transparent;
+  white-space: nowrap; 
 }
 
-.buttoncolor:hover {
-  background-color: #759D32 !important;
-  color: #000 !important;
+.btn:hover,.btn:focus,.btn:active,.btn:first-child:active {
+  background: #759d32;
+  color: #fff;
+  border:1px solid #759d32;
+  white-space: nowrap; 
 }
 
 a {
@@ -138,4 +114,90 @@ input[type="number"]:focus,
 [contenteditable].form-control:focus {
   box-shadow: inset 0 -1px 0 #ddd;
   border: 2px solid #92c43e;
+}
+::placeholder {
+  color: #a5a7a5;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-bottom: 4px !important;
+  align-items: center;
+}
+
+ 
+input[type="checkbox"]:checked {
+  background-color: #92C43E;
+
+}
+.inputlable{
+  font-family: "Source Serif Pro";
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6;
+  font-size: 16px;
+}
+.inputchecklable{
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+
+@media (max-width: 576px){
+  h1{ font-size: 28px; }
+  h2{ font-size: 24px; }
+  h3{ font-size: 20px; }
+  h4{ font-size: 18px; }
+  h5{ font-size: 16px; }
+  h6{ font-size: 14px; }
+}
+
+@media (max-width: 768px){
+  h1{ font-size: 32px; }
+  h2{ font-size: 26px; }
+  h3{ font-size: 18px; }
+  h4{ font-size: 16px; }
+  h5{ font-size: 14px; }
+  h6{ font-size: 12px; }
+}
+
+@media (max-width: 992px) {
+  h1{ font-size: 36px; }
+  h2{ font-size: 28px; }
+  h3{ font-size: 20px; }
+  h4{ font-size: 18px; }
+  h5{ font-size: 16px; }
+  h6{ font-size: 14px; }
+
+  button, .btn {
+    font-size: 16px;
+    border-radius: 4px;
+    padding: 0px 0px;
+    height: 48px;
+    background: #92c43e;
+    color: #fff;
+    white-space: nowrap; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+@media (max-width: 1200px){
+  h1{ font-size: 40px; }
+  h2{ font-size: 32px; }
+  h3{ font-size: 24px; }
+  h4{ font-size: 20px; }
+  h5{ font-size: 18px; }
+  h6{ font-size: 16px; }
+}
+@media (min-width: 1201px){
+  h1{ font-size: 40px; }
+  h2{ font-size: 32px; }
+  h3{ font-size: 24px; }
+  h4{ font-size: 20px; }
+  h5{ font-size: 18px; }
+  h6{ font-size: 16px; }
 }

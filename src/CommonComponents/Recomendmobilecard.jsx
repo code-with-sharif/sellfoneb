@@ -1,21 +1,41 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import '../../src/Styles/Recomendmobilecard.css'
-function Recomendmobilecard({ imgSrc, title, price, buttonLabel }) {
+import '../../src/Styles/Home/Recomendmobilecard.css'
+import { Link, useNavigate } from 'react-router-dom';
+import SecondpartSelldevice from './../Components/SecondpartSelldevice/SecondpartSelldevice';
+function Recomendmobilecard({ imgSrc, title, price, buttonLabel,recomendmobile }) {
+  const navigate=useNavigate();
+  const Handleclick = () => {
+    navigate("/secondpartSelldevice");
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
   return (
-    <div className="col-sm-6 col-md-4 col-lg-3 mb-3">
-    <Card className='carddata' >
-      <Card.Img variant="top" src= {imgSrc && imgSrc} />
+    
+
+    <Card className='card-data' >
+                 
+
+      {imgSrc &&<Card.Img variant="top" style={{cursor:"pointer"}} src= {imgSrc && imgSrc} onClick={Handleclick} />}
+      
       <Card.Body>
-        <Card.Title className='thirdheading'>{title && title}</Card.Title>
-        <Card.Text>
+       
+       {title && <Card.Title   className=' recomendedcardtitle '  onClick={Handleclick} >{title && title}</Card.Title>}
+     
+      {price &&  <Card.Text>
         {price && price}
-        </Card.Text>
+        </Card.Text>}
+        {buttonLabel &&
         <Button  className='w-100 btnstyle'>{buttonLabel && buttonLabel}</Button>
+        }
       </Card.Body>
+  
     </Card>
-    </div>
+  
   );
+
 }
 
 export default Recomendmobilecard;

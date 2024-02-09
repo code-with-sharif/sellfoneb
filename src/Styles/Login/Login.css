@@ -1,0 +1,40 @@
+/* Login.css */
+.loginheading{
+    margin-top: 0px !important;
+    font-family: "Source Serif Pro";
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.6;
+    font-size: 40px;
+}
+.forgot-password-link {
+    color: #92C43E !important;
+    border-bottom: 2px solid #92C43E !important;
+    text-decoration: none !important; /* Remove default underline */
+  }
+  
+  .googleIcon{
+    border: 2px solid #E3E3E3 ;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    gap: 15px;
+    padding: 10px 0px 10px 0px;
+    border-radius: 7px;
+  }
+ 
+ .emailtext{
+  font-family: "Source Serif Pro";
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6;
+  font-size: 16px;
+ }
+ .passwordtext{
+  font-family: "Source Serif Pro";
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6;
+  font-size: 16px;
+ }

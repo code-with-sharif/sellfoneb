@@ -1,0 +1,26 @@
+/* Carouselindicator.css */
+
+.carousel-indicators > li {
+    color: green !important; /* Default color is now green */
+    height: 20%;
+    background-color: red !important;
+  }
+  
+  .carousel-indicators .active {
+    background-color: green; /* Active indicator color is also green */
+  }
+  /* Adjust the breakpoint as needed */
+@media (min-width: 992px) {
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .active.carousel-item-right,
+    .carousel-inner .carousel-item-prev,
+    .carousel-inner .active.carousel-item-left {
+      transform: translateX(50%);
+    }
+  
+    .carousel-inner .carousel-item-right,
+    .carousel-inner .carousel-item-left {
+      transform: translateX(0);
+    }
+  }
+  
