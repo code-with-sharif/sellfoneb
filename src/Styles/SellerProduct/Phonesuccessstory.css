@@ -1,0 +1,36 @@
+
+
+.carouselcard {
+    width: 100%;
+    height: 300px; 
+
+  }
+
+.carouselimg {
+    width: 100%;
+    height: 99%;
+    margin: 0;
+    padding: 0;
+    /* border: 2px solid red; */
+    
+  }
+  
+
+  
+  @media (max-width: 992px) {
+    .carouselcard {
+      max-width: 100%;
+      height: auto;  
+    }
+    
+.carouselimg {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* border: 2px solid blue; */
+    
+  }
+  
+  }
+  

@@ -184,7 +184,9 @@ const Home = () => {
       <ChooseUs />
       <WorksSection />
       <SellmobilePhone />
+      <section className="" style={{ paddingTop: "60px", paddingBottom: "60px" }}>
       <RecommededMobil  recomendmobile={recomendmobile}/>
+      </section>
 
       <AccordionSection   customAccordion ={ <CustomAccordion />}  questionsigneimg={questionsigneimg}/>
       <Sellphonesafly />

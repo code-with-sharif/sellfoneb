@@ -6,7 +6,9 @@ const Faqsherosection = () => {
   return (
    <>
     <section className="faqherobgcolor">
-        <div className="container-fluid d-flex justify-content-between flex-lg-nowrap flex-wrap ">
+        <div className=" d-flex justify-content-between flex-lg-nowrap flex-wrap "
+        style={{width:"92%", margin:"auto"}}
+        >
           <div
             style={{  }}
             className=" faqsheroheading   ">

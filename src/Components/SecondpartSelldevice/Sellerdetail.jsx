@@ -104,8 +104,8 @@ const Sellerdetail = () => {
             />
           </div>
 
-          <div className="col-lg-12 text-center my-4">
-            <button type="submit" className="btn ">
+          <div className="col-lg-12 text-center ">
+            <button   type="submit" className="btn px-4 ">
               Submit
             </button>
           </div>

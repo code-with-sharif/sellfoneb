@@ -79,7 +79,7 @@ const Choosesellphone = () => {
                   <p className="white mt-1">{item}</p>
                 </div>
               ))}
-              <button className="btn my-2">{card.buttonText}</button>
+              <button className="btn my-2 px-2">{card.buttonText}</button>
             </div>
           </div>
         ))}

@@ -9,6 +9,7 @@ const Navbar = () => {
   const [showOffCanvas, setShowOffCanvas] = useState(false);
 
   const handleMenuItemClick = () => {
+    
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -52,7 +53,7 @@ const Navbar = () => {
         show={showOffCanvas}
         onHide={closeOffCanvas}
         placement="start"
-        backdrop={false}
+        // backdrop={false}
       >
         <Offcanvas.Header closeButton>
           <Offcanvas.Title> 
@@ -75,19 +76,21 @@ const Navbar = () => {
 
             <NavLink
               className="navitem  "
-              to="/process"
+              to="/myaccountpage"
               onClick={handleMenuItemClick}
             >
               Process
             </NavLink>
             <hr />
 
-            <NavLink className="navitem " to="/services" onClick={handleMenuItemClick}>
+            {/* <NavLink className="navitem "  > */}
+            <div className="navitem"> 
               Services
-            </NavLink>
+              </div>
+            {/* </NavLink> */}
             <ul className="subnavitem">
               <li className="w-100 position-relative mt-2">
-                <NavLink className="thirdheading" to="/sellerproduct"
+                <NavLink className=" " to="/sellphone"
                  onClick={() => {
                 handleMenuItemClick();
                 closeOffCanvas();
@@ -112,7 +115,12 @@ const Navbar = () => {
                 </div>
               </li>
               <li className="w-100 position-relative mt-1">
-                <NavLink className="thirdheading" to="/services/service2">
+                <NavLink className="thirdheading" to="/buyphone"
+                 onClick={() => {
+                handleMenuItemClick();
+                closeOffCanvas();
+              }}
+                >
                   Buy Mobile Phone
                 </NavLink>
                 <div className=" greatherSign" style={{}}>
@@ -136,7 +144,7 @@ const Navbar = () => {
             <hr />
 
             <NavLink
-              className="navitem thirdheading"
+              className="navitem "
               to="/about"
               onClick={handleMenuItemClick}
             >
@@ -144,7 +152,7 @@ const Navbar = () => {
             </NavLink>
             <hr />
             <NavLink
-              className="navitem thirdheading"
+              className="navitem "
               to="/faq"
               onClick={handleMenuItemClick}
             >
@@ -152,20 +160,23 @@ const Navbar = () => {
             </NavLink>
             <hr />
             <NavLink
-              className="navitem thirdheading"
+              className="navitem "
               to="/contact"
               onClick={handleMenuItemClick}
             >
               Contact
             </NavLink>
             <hr />
-            <div className="navitem thirdheading">
+            <div className="navitem  ">
               {/* to="/support" onClick={handleMenuItemClick} */}
               Support
             </div>
             <ul className="mt-2">
               <li className="subnavitem">
-                <NavLink className="thirdheading" to="/services/service1">
+                <NavLink className="thirdheading" to="/adsphonesection"
+              onClick={handleMenuItemClick}
+                
+                >
                   Support & Safety Portal
                 </NavLink>
               </li>

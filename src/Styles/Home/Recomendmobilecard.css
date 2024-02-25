@@ -14,31 +14,28 @@
   font-style: normal;
   font-weight: 700;
   line-height: 1.6;
-  font-size: 16px;
-  cursor: pointer;
+  font-size: 16px; 
+}
+.recomendedcardprice{
+  font-size: 32px;
+  font-weight: bolder;
+  font-family: "Source Serif Pro";
+  font-style: normal;
+  line-height: 1.6;
 }
 
-.btnstyle {
-  white-space: nowrap;
-  border: 2px solid transparent;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  flex-shrink: 0;
-  border-radius: 7px;
-  background: #92C43E;
-  color: #FFF;
-  font-family: Roboto;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  border: none;
-  text-align: center;
-}
 
 /* Media Query for smaller screens (e.g., mobile devices) */
-@media (max-width: 576px) {
+@media (min-width: 320px) and (max-width: 375px) {
+  .card-body {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 768px) {
   .carddata {
     width: 100% !important; /* Full width on smaller screens */
     margin-right: 0; /* Remove margin between cards */
   }
+
 }

@@ -7,13 +7,9 @@
 .workdata {
   padding-top: 15px;
 }
-.cardData {
-  /* width: 651px; */
-  height: auto;
-  padding-bottom: 5px;
-  flex-shrink: 0;
-  border-radius: 7px;
-  /* background: #FFF; */
+ 
+.bgcirclecallimg{
+  z-index: 2;
 }
 .subcircle {
   border-radius: 31.5px;
@@ -25,6 +21,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index:99;
+
   
 }
 .quantity {
@@ -52,7 +50,7 @@
     position: absolute;
     left: 30px;
     height: 40%!important;
-  
+  z-index: 0 !;
 }
 
 @media (max-width: 900px) {

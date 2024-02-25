@@ -18,7 +18,7 @@ const Whysellphone = ({ verticalLine }) => {
         <div className="text-center ">
           <h1 className=" p-2">
            Why  
-            <span className="green">Sell</span>
+            <span className="green px-2">Sell</span>
             your mobile on Sellfone.pk? 
           </h1>
           <p

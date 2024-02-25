@@ -1,4 +1,3 @@
-
 import React from "react";
 import Sellphonesafly from "../Home/Sellphonesafly";
 import Needquestion from "../Home/Needquestion";
@@ -9,14 +8,14 @@ import AccordionSection from "../Home/AccordionSection";
 import heroimg1 from "../../Images/Sellerproduct/Sellerproductherosection/sellerproductheroimg1.png";
 import heroimg2 from "../../Images/Sellerproduct/Sellerproductherosection/sellerproductheroimg2.png";
 import Sellerproductherosection from "../Sellerproduct/Sellerproductherosection";
- 
-import Howsellphone from './../Services/Howsellphone';
-import SellphoneQuickly from './../Services/sellphoneQuickly';
-import Choosesellphone from './../Services/Choosesellphone';
-import Whysellphone from './../Services/Whysellphone';
-import Interestingtip from './../Services/Interestingtip';
-import Carouselindicator from './../Services/Carouselindicator';
-import MultipleItems from "./Item";
+
+import Howsellphone from "./../Services/Howsellphone";
+import SellphoneQuickly from "./../Services/sellphoneQuickly";
+import Choosesellphone from "./../Services/Choosesellphone";
+import Whysellphone from "./../Services/Whysellphone";
+import Interestingtip from "./../Services/Interestingtip";
+import Carouselindicator from "./../Services/Carouselindicator";
+import MultipleItems from "./MultipleItems";
 import Phonesuccessstory from "../Services/Phonesuccessstory";
 const Sellerproduct = () => {
   const heroProps = {
@@ -28,27 +27,23 @@ const Sellerproduct = () => {
 
   return (
     <>
-  
+      <Sellerproductherosection {...heroProps} />
 
-    <Sellerproductherosection {...heroProps} />
+      <Choosesellphone />
 
-<Choosesellphone />
+      <Whysellphone />
+      <Howsellphone />
+      <SellphoneQuickly />
 
-<Whysellphone />
-<Howsellphone />
-{/* <SellphoneQuickly /> */}
-{/* <Phonesuccessstory /> */}
+      <MultipleItems />
+      <Interestingtip />
+      <AccordionSection
+        customAccordion={<CustomAccordion />}
+        questionsigneimg={questionsigneimg}
+      />
 
-{/* <Carouselindicator  /> */}
-{/* <MultipleItems /> */}
-{/* <Interestingtip /> */}
-<AccordionSection
-  customAccordion={<CustomAccordion />}
-  questionsigneimg={questionsigneimg}
-/>
-
-<Sellphonesafly />
-<Needquestion />
+      <Sellphonesafly />
+      <Needquestion />
     </>
   );
 };

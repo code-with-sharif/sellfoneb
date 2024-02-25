@@ -33,7 +33,7 @@ const Howsellphone = () => {
         <div className="text-center " >
           <h1 className=" px-3">
             How to   
-            <span className="green">Sell</span>
+            <span className="green px-2">Sell</span>
            your mobile phone? 
           </h1>
           <p className="p-lg-0 px-4  mx-auto" style={{marginTop: "15px", maxWidth: "500px"}}>

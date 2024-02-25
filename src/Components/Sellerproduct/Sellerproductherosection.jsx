@@ -29,9 +29,10 @@ const Sellerproductherosection = ({ title, paragraph, img }) => {
 
   return (
     <>
-      <section className="herobgcolor " style={{ paddingBottom: "60px" ,marginTop:"15px"}}  >
-        <div className="container-fluid d-flex justify-content-between flex-lg-nowrap flex-wrap ">
-          <div style={{}} className=" heroheading   ">
+      <section className="herobgcolor " style={{  }}  >
+        <div className="container-fluid d-flex justify-content-lg-between flex-lg-nowrap flex-wrap ">
+        <div className="d-flex justify-content-center align-content-center">
+        <div style={{}} className=" heroheading   ">
             <h1
               style={{ paddingBottom: "5px" }}
               className="black"
@@ -46,6 +47,7 @@ const Sellerproductherosection = ({ title, paragraph, img }) => {
             </p>
           </div>
 
+        </div>
           <div className="heroimg1">
             <img
               className="img-fluid"

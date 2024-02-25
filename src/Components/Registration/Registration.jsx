@@ -6,7 +6,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
-import '../../Styles/Login/Login.css';
+
 import '../../Styles/Registration/Registration.css';
 function Registration() {
     const [show, setShow] = useState(false);
@@ -44,10 +44,8 @@ function Registration() {
   
   return (
     <>
-      {/* <Button variant="primary" onClick={handleShow}>
-        Registration
-      </Button> */}
-      <Link to="#" onClick={handleShow}> Registration</Link>
+      
+      <Link to="#" onClick={handleShow} className='registarationtitle' style={{}}> Registration</Link>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton></Modal.Header>
@@ -171,17 +169,14 @@ function Registration() {
 
 
             <Form.Group className="mb-2 position-relative" controlId="exampleForm.TermsCheckbox">
-          <Form.Check
-            type="checkbox"
-            label={
-              <p>
+          <div className="group">
+            <input type='checkbox' />
+            <label htmlFor="">
+          
                 I agree to all <span className="green">Terms & Conditions</span> and <span className='green'>Privacy Policy</span>
-              </p>
-            }
-            checked={acceptTerms}
-            onChange={() => setAcceptTerms(!acceptTerms)}
-            // style={{ backgroundColor: acceptTerms ? 'red' : 'transparent' }}
-          />
+            
+            </label>
+          </div>
         </Form.Group>
 
           </Form>

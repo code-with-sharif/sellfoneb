@@ -1,0 +1,99 @@
+.maincontainer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    width: 90%;
+    margin: auto;
+  }
+  
+  .gridcontainer {
+    display: grid;
+    border: 2px solid red;
+    grid-template-columns: 20% 78%;
+    grid-template-rows: auto auto;
+    gap: 30px;
+    padding: 0px;
+  }
+  
+  .filtercategory {
+    border: 2px solid #E3E3E3;
+    border-radius: 5px ;
+    grid-column: 1/2;
+    grid-row: 1 /-1;
+  }
+  
+  .checklable{
+    padding-left: 4%;
+  }
+
+  input[type="range"]:focus::-webkit-slider-thumb {
+    box-shadow: none !important;
+  }
+  
+  input[type="range"]:focus::-moz-range-thumb {
+    box-shadow: none !important;
+  }
+  
+  input[type="range"]:focus::-ms-thumb {
+    box-shadow: none !important;
+  }
+/* /// */
+
+
+  
+/* Customize thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #92C43E; /* Default background color for the thumb */
+}
+
+/* Change thumb color when in focus */
+input[type="range"]:focus::-webkit-slider-thumb {
+  background: #92C43E;
+}
+
+/* Customize progress bar */
+/* input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px ;
+  background: #92C43E;  
+  z-index: 100;
+} */
+
+
+ 
+  .sortedcategory {
+    border: 2px solid blue;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  
+  
+ 
+    
+ 
+ 
+  /* Display options on hover */
+  .decorated{
+    height: 50px;
+    border: 2px solid red;
+
+  }
+  .decorated option:hover {
+    box-shadow: 0 0 10px 100px #000 inset;
+    background-color:red !important ;
+}
+  
+   
+
+  .buycardsection {
+    border: 5px solid green;
+    grid-column: 2 / 3;
+    grid-row: 2 / -2;
+  }
+  
+   
+

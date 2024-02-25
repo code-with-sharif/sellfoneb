@@ -8,9 +8,6 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import '../../Styles/Login/Login.css'
 import { Link } from 'react-router-dom';
 
-
-
-
 function Login() {
   const [show, setShow] = useState(false);
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -18,7 +15,7 @@ function Login() {
 
   const handleClose = () => {
     setShow(false);
-    // Reset password and password visibility on modal close
+  
     setPassword('');
     setPasswordVisible(false);
   };
@@ -30,10 +27,8 @@ function Login() {
 
   return (
     <>
-      {/* <Button variant="primary" onClick={handleShow}>
-       Login
-      </Button> */}
-      <Link to="#" onClick={handleShow}> Login</Link>
+     
+      <Link to="#" onClick={handleShow} className='logintitle'> Login</Link>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
@@ -86,6 +81,7 @@ function Login() {
                 placeholder="name@example.com"
                 autoFocus
                 style={{caretColor:"#92C43E"}}
+                required // This attribute ensures the field is required
               />
             </Form.Group>
             <Form.Group className="mb-3 position-relative" controlId="exampleForm.ControlPassword">
@@ -97,23 +93,23 @@ function Login() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   style={{caretColor:"#92C43E"}}
+                  required // This attribute ensures the field is required
                 />
                 <InputGroup.Text onClick={togglePasswordVisibility}>
                   {passwordVisible ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
                 </InputGroup.Text>
               </InputGroup>
-            
-<div className="text-end mt-1">
-  <a href="#" onClick={() => alert("Forgot Password?")} className="forgot-password-link">
-    Forgot Password?
-  </a>
-</div>
-
+              
+              <div className="text-end mt-1">
+                <a href="#" onClick={() => alert("Forgot Password?")} className="forgot-password-link">
+                  Forgot Password?
+                </a>
+              </div>
             </Form.Group>
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button className='w-100 btn' onClick={handleClose}>
+          <Button className='w-100 btn'>
             Login
           </Button>
         </Modal.Footer>

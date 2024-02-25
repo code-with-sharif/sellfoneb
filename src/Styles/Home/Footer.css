@@ -1,7 +1,5 @@
 
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
+
 #footer {
     font-size: 14px;
     background: white;
@@ -10,73 +8,37 @@
 width: 250.276px;
 height: 80px;
 flex-shrink: 0;
+
 }
 .footerText{
-    padding-top: 30px !important;
-    padding-bottom: 10px !important;
-    padding-right: 120px !important;
+ 
+padding: 30px 180px 10px 0px !important;
+/* border: 2px solid red; */
 }
   #footer .footer-top {
     padding: 60px 0 30px 0;
     background: #fff;
   }
+
+   
   
-  #footer .footer-top .footer-contact {
-    margin-bottom: 30px;
-  }
-  
-  #footer .footer-top .footer-contact h3 {
-    font-size: 28px;
-    margin: 0 0 10px 0; 
-     padding: 2px 0 2px 0;
-    line-height: 1;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: #37517e;
-  }
-  
-  #footer .footer-top .footer-contact p {
-    font-size: 14px;
-    line-height: 24px;
-    margin-bottom: 0;
-    font-family: "Jost", sans-serif;
-    color: #5e5e5e;
-  }
-  
-  #footer .footer-top h6 {
-    color: #212221;
-font-family: "Source Serif Pro";
-font-size: 16px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-    position: relative;
-    padding-bottom: 12px;
-  }
-  
-  #footer .footer-top .footer-links {
-    margin-bottom: 30px;
-    
-  }
-  
-  #footer .footer-top .footer-links ul {
+    .linksorderlist {
     list-style: none;
     padding: 0;
     margin: 0;
   }
   
    
-  #footer .footer-top .footer-links ul li {
+  .sociallinksitem {
     padding: 10px 0;
     display: flex;
     align-items: center;
+    /* border: 2px solid red; */
   }
   
-  #footer .footer-top .footer-links ul li:first-child {
-    padding-top: 0;
-  }
   
-  #footer .footer-top .footer-links ul a {
+  
+  #footer  a {
     color: #212221;
     font-family: Roboto;
     font-size: 14px;
@@ -88,10 +50,12 @@ line-height: normal;
     line-height: 1;
   }
   
-   
+  ul,li{
+    margin-left: 0px !important;
+  }
   #footer .footer-top .social-links {
     display: flex;
-    gap: 8px; /* Adjust the gap as needed */
+    gap: 8px; 
 }
 
 #footer .footer-top .social-links a {
@@ -112,7 +76,7 @@ line-height: normal;
  
  
   
-  @media (max-width: 767px) {
+  @media (max-width:992px) {
     .footerText{
         padding-top: 30px !important;
         padding-bottom: 10px !important;
@@ -121,11 +85,15 @@ line-height: normal;
     .navigationpart{
 
       width: 40% !important;   
+      margin-top: 30px;
      }
     .companypart{
 
       width: 60% !important;   
+      margin-top: 30px;
       
      }
-
+     .servicepart{
+      margin-top: 30px;
+     }
   }

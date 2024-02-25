@@ -1,0 +1,15 @@
+.sellercontainer {
+    margin-top: 8%;
+    height: auto;
+    padding: 3% 2px;
+    border-radius: 7px;
+    border:2px solid #E3E3E3;
+
+}
+/* Add dots before <p> text */
+.sellercontainer p:before {
+    content: "•"; /* Unicode character for bullet point */
+    color: black; /* Color of the bullet point */
+    margin-right: 25px !important; /* Adjust spacing between bullet point and text */
+    font-size: 30px; /* Increase the size of the bullet point */
+}

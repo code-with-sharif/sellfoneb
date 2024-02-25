@@ -1,11 +1,54 @@
-.brandcheckbox {
-    display: none;}
-.brand-icon{
-    cursor: pointer;
-}
-.brand-icon:hover + .brandcheckbox,
-.brandcheckbox:hover {
-    display: block;
-    transition: 1s ease-in-out; /* Adding transition for smooth effect */
-}
+.brandcard {
+  width: 35%;
+  border-radius: 7px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
  
+}
+
+
+
+
+.downarrow {
+  transition: transform 0.3s ease;
+}
+.labeltitle {
+  flex-basis: 31%;
+}
+
+
+
+.dropdown-list .dropdown-option input {
+  display: none;
+}
+
+.dropdown-list .dropdown-option label:before {
+  content: "";
+  background-color: transparent;
+  border: 1px solid #1a1a1a80;
+  padding: 11px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 12px;
+  border-radius: 4px;
+}
+.dropdown-list .dropdown-option input:checked + label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  width: 8px;
+  height: 15px;
+  border: solid #8cc63ee5;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+@media (max-width: 992px) {
+  .brandcard {
+    width: 50%;
+  }
+  .labeltitle {
+    flex-basis: 100%;
+  }
+}

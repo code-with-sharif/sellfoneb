@@ -1,41 +1,75 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import '../../src/Styles/Home/Recomendmobilecard.css'
-import { Link, useNavigate } from 'react-router-dom';
-import SecondpartSelldevice from './../Components/SecondpartSelldevice/SecondpartSelldevice';
-function Recomendmobilecard({ imgSrc, title, price, buttonLabel,recomendmobile }) {
-  const navigate=useNavigate();
-  const Handleclick = () => {
-    navigate("/secondpartSelldevice");
+import React, { useState } from 'react';
+import { Card, Button } from 'react-bootstrap';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import '../Styles/Home/Recomendmobilecard.css'; // Import your CSS file here
+
+function Recomendmobilecard({ imgSrc, title, price, buttonLabel, recomendmobile, buttonWidth,priceSize }) {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [checkLocation, setCheckLocation] = useState(location.pathname);
+
+  const handleClick = () => {
+    if (checkLocation === '/process') {
+      navigate("/secondpartSelldevice");
+    }
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   }
+
+  const handleButtonClick = () => {
+    if (checkLocation === '/secondpartSelldevice') {
+      navigate("/editphoneprice");
+    }
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+
   return (
-    
+    <Card className='card-data'>
+      {imgSrc &&
+        <Card.Img
+          variant="top"
+          src={imgSrc}
+          onClick={handleClick}
+          style={{ cursor: checkLocation === '/process' ? 'pointer' : 'default' }}
+        />
+      }
 
-    <Card className='card-data' >
-                 
+      <Card.Body className='cardbody' style={{}}>
+        {title &&
+          <Card.Title
+            className='recomendedcardtitle'
+            onClick={handleClick}
+            style={{ cursor: checkLocation === '/process' ? 'pointer' : 'default' }}
+          >
+            {title} {recomendmobile && recomendmobile.title}
+          </Card.Title>
+        }
 
-      {imgSrc &&<Card.Img variant="top" style={{cursor:"pointer"}} src= {imgSrc && imgSrc} onClick={Handleclick} />}
-      
-      <Card.Body>
-       
-       {title && <Card.Title   className=' recomendedcardtitle '  onClick={Handleclick} >{title && title}</Card.Title>}
-     
-      {price &&  <Card.Text>
-        {price && price}
-        </Card.Text>}
+        {price &&
+          <Card.Text className={priceSize ? "recomendedcardprice" : ""}>
+            {price} {recomendmobile && recomendmobile.price}
+          </Card.Text>
+        }
+
         {buttonLabel &&
-        <Button  className='w-100 btnstyle'>{buttonLabel && buttonLabel}</Button>
+          <Button
+            style={{ border: "none" }}
+            onClick={handleButtonClick}
+            className='btn'
+            style={{ ...(buttonWidth ? { width: "35%" } : { width: "100%" }) }}  
+
+          >
+            {buttonLabel}
+          </Button>
         }
       </Card.Body>
-  
     </Card>
-  
   );
-
 }
 
 export default Recomendmobilecard;

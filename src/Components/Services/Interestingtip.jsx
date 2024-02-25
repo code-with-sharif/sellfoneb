@@ -21,7 +21,7 @@ const Interestingtip = () => {
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
     },
     {
-      id: 3,
+      id: 4,
       imgSrc: Interestingtipimg1,
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
     },
@@ -31,7 +31,7 @@ const Interestingtip = () => {
   return (
     <section style={{paddingTop:"60px", paddingBottom:"60px"}}>
       <div className="container interestingcontainer">
-        <div className="col textdata">
+        <div className="col textdata ">
           <div className="text-center">
             <h1 className=" p-2">
               Interesting  
@@ -45,8 +45,9 @@ const Interestingtip = () => {
         </div>
 
         {/* Wrap the mapped elements inside a row container */}
-        <div className="d-flex flex-wrap " style={{}}>
+        <div className="d-flex flex-wrap interestingcard2 " style={{ }}>
   {cardData.map((card) => (
+  
     <div key={card.id} className="interestingcard">
       <div style={{ width: "70px", height: "70px", border: "", margin: "auto", marginTop: "-15%" }}>
         <img className="img-fluid" src={card.imgSrc} alt="" />
@@ -56,10 +57,12 @@ const Interestingtip = () => {
   ))}
 </div>
 
-
+{/* <div className="self-center"> */}
+  
 <div className="col imgcard">
 <img className="img-fluid" src={Interestingtipimg2} alt="" style={{maxWidth :"100%", height:"100%"}} />
 </div>
+{/* // </div> */}
       </div>
     </section>
   );

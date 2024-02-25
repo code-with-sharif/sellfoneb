@@ -2,7 +2,7 @@
     width: 100%;
     background: radial-gradient(43.22% 61.13% at 50.14% 49.94%, #F4F9EC 0%, #DEEDC5 100%);
     min-height: 300px;
-  
+  padding: 0px 0px 60px 0px;
 }
 
 .heroheading{
@@ -10,21 +10,26 @@
     justify-content: center;
     flex-direction: column;
     height: 300px;
-    margin-left: 55px;    
+    margin-left: 55px;   
+    /* border: 2px solid red;  */
 }
 .heroimg1{
     width: 30%;
-   
+   /* border: 2px solid green; */
 }
-@media (max-width: 991px) {
-    .herobgcolor{
-        padding-top: 60px;         
-    }
+/* .buyphoneheroimg1{
+    width: 60%;
+    border: 2px solid red;
 
-    .contactheroheading{
+} */
+@media (max-width: 992px) {
+
+  
+    
+    .heroheading{
         text-align: center;
         height: 250px !important;
-        margin: 0;
+        margin: auto;
         width: 100%;       
     }
 
@@ -32,5 +37,11 @@
     .heroimg1{
         width: 100%;     
       
+    }
+
+    .buyphoneheroimg1{
+        width: 100%;
+       /* border: 2px solid red; */
+    
     }
 }

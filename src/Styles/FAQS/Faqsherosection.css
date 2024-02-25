@@ -2,7 +2,6 @@
     width: 100%;
     background: radial-gradient(43.22% 61.13% at 50.14% 49.94%, #F4F9EC 0%, #DEEDC5 100%);
     min-height: 300px;
-  
 }
 
 .faqsheroheading{
@@ -10,12 +9,9 @@
     justify-content: center;
     flex-direction: column;
     height: 300px;
-    margin-left: 55px;
-    
 }
 .faqsheroimg1{
-    width: 30%;
-   
+    width: 35%;
 }
 @media (max-width: 991px) {
     .faqherobgcolor{

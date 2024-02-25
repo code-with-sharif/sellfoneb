@@ -8,7 +8,7 @@ const RecommededMobil = ({ recomendmobile }) => {
 
   return (
     <>
-      <section className="" style={{ paddingTop: "60px", paddingBottom: "60px" }}>
+       <div>
         <h1 className="text-center pb-5">
           <span className="green">{mapdata?.firstname}</span> {mapdata?.lastname}
         </h1>
@@ -31,9 +31,10 @@ const RecommededMobil = ({ recomendmobile }) => {
               ))}
           </div>
         </div>
-      </section>
+     </div>
     </>
   );
 };
 
 export default RecommededMobil;
+

@@ -1,83 +1,175 @@
-
- 
- /* .headerlogoImg {
-   width:15% !important;
-   height: auto;
-  
- } */
- .custominput {
+/* Custom input */
+.custominput {
   font-size: 14px !important;
   height: 50px;
+}
 
-}  
-  
+/* Search icon */
+.serahicon {
+  width: 20px !important;
+  height: 20px !important;
+}
 
-   .serahicon{
-   width: 20px !important;
-   height: 20px !important;
- }
-  
- 
- .headerimg {
-   width: 20% !important;
-   height: 55px !important;
+.awatarImg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
 
- }  
- .rotate-90 {
+
+/* Header image */
+.headerimg {
+  width: 20% !important;
+  height: 55px !important;
+}
+
+/* Down arrow icon */
+.downarrowicon {
+  background: #f4f9ec;
+  width: 45px;
+  height: 45px;
+  border-radius: 7px;
+}
+
+/* Down arrow container */
+.downarrowcontainer {
+  border: 2px solid red;
+  cursor: pointer;
+}
+
+/* Header down arrow */
+.headerdownarrow {
+  font-size: 24px;
+  margin: 12px;
+}
+
+/* Rotate down arrow on hover */
+.downarrowcontainer:hover .headerdownarrow {
   transform: rotate(180deg);
   transition: transform 0.3s ease;
 }
- .dropdown-item{
-  color: #212221;
-font-family: Roboto;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-width: 90px !important;
-padding-left: 0% !important;
-margin-left: 20px !important;
- 
 
+/* Dropdown menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% - 27px);
+  right:85px ;
+}
 
-}  
- .dropdown-item:hover{
+/* Display dropdown menu on hover */
+.dropdown-menu:hover {
+  display: block;
+}
+
+/* Display dropdown menu when container is hovered */
+.downarrowcontainer:hover + .dropdown-menu {
+  display: block;
+}
+
+/* Dropdown item */
+.dropdown-item {
+  color: #92c43e;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 20px !important;
+  /* border: 2px solid red !important; */
+}
+
+/* Hover effect for dropdown items */
+.dropdown-item:hover {
   background: none !important;
- }
- .caretdon{
-  /* background-color: red; */
- }
+}
 
- @media (max-width: 992px) {
-  .headerlogoimg{
-    width:100% !important;
+/* List styling */
+ul, li {
+  padding-left: 0 !important;
+  margin-left: 10px !important;
+  margin-bottom: 0 !important;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 992px) {
+  /* Adjust header logo image */
+  .headerlogoimg {
+    width: 100% !important;
     height: auto !important;
+    
   }
 
+  /* Hide custom input */
   .custominput {
-
-    display: none ! ;
+    display: none;
   }
 
-  .serahicon{
+  /* Hide search icon */
+  .serahicon {
     display: none !important;
-
   }
-  .headerimg{
+
+  /* Adjust header image */
+  .headerimg {
     width: 100%;
-
   }
-  .dropdownitem{
+
+  .downarrowicon{
+display: none;
+  }
+  /* Hide dropdown items */
+  .dropdownitem {
     display: none !important;
-     
-
   }
-  .headerbutton{
+
+  /* Hide header button */
+  .headerbutton {
     display: none !important;
-
   }
+
+  /* Align avatar image to the right */
   .awatarImg {
-    display: flex;  
-    justify-content: flex-end;  
+    display: flex;
+    justify-content:end;
+    padding: 0px !important;
+    gap: 0;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: calc(100% - 26px);
+    right:65px;
+  }
+}
+
+@media (min-width:425px) and (max-width:767px) {
+  .dropdown-menu {
+    position: absolute;
+    top: calc(100% - 12px);
+    right:5px;
+
+  }
+  .headerlogoimg {
+    width: 100% !important;
+    height: 100%;
+    
+  }
+}
+@media (min-width:375px) and (max-width:425px) {
+  .dropdown-menu {
+    position: absolute;
+    top: calc(100% - 12px);
+    right:5px;
+
+  }
+}
+@media (min-width:320px) and (max-width:375px) {
+  .dropdown-menu {
+    position: absolute;
+    top: calc(100% - 12px);
+    right:5px;
+
   }
 }

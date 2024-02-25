@@ -1,14 +1,73 @@
 .MenuIcon {
-  max-width: 60%;  
+  
+  width:50px ;
   height: 100%;
-  margin: 0 auto;  
+  margin: 0 auto;
   background-color: #F4F9EC;
-  padding: 10px 10px;
+  padding: 10px;
   border-radius: 7px;
   float: right;
   /* border: 2px solid red; */
+  display: block; 
 }
 
+
+.navitem {
+  margin: 0 0 0 30px;
+  width: 65px;
+}
+
+
+
+.subnavitem {
+  width: 150px;
+  margin: 0px 0px 0px 43px !important;
+  /* border: 2px solid red !important; */
+
+}
+
+.greatherSign {
+  position: absolute;
+  left: 290px;
+  top: 0;
+}
+
+
+.offcanvas-body a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: column !important;
+  align-items: flex-start;
+}
+.greatherSign {
+  position: absolute;
+  left: 290px;
+  top: 0;
+}
+
+.btn-close:focus{
+  box-shadow: none !important;
+
+} 
+
+
+
+
+
+@media (max-width: 992px) {
+  .MenuIcon {
+    width:40px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #F4F9EC;
+    padding: 10px;
+    border-radius: 7px;
+    float: left;
+
+    /* border: 2px solid red; */
+    display: block; 
+  }
 
 .offcanvas-body a {
   text-decoration: none;
@@ -27,49 +86,38 @@
   width: 65px;
 }
 
-ul,
+/* ul,
 li {
   list-style: none;
   padding: 0;
-  margin: 0 0 0 20px;
-}
-.subnavitem{
+  margin: 0 0 0 20px ;
+  border: 2px solid red;
+} */
+
+.subnavitem {
   width: 180px;
 }
-/* 
-.subnavitem {
-  display: none;  
-}
 
-.navitem:hover .subnavitem {
-  display: block;
-}
-.navitem:hover > .subnavitem {
-  display: block;
-}
-
- 
-.navitem:hover .submenu {
-  display: block;  
-} */
-.greatherSign{
-  position:absolute;
-  left: 290px;
+.greatherSign {
+  position: absolute;
+  left: 280px;
   top: 0;
+  /* border: 2px solid red; */
 }
 
-@media(max-width: 992px){
-  .MenuIcon {
-    width: 100%;
-    height: 100%;
-  padding: 10px 20px;
-  float: left;
 
-  }
-  .greatherSign{
+
+
+}
+
+
+
+@media (max-width: 320px) {
+  .greatherSign {
     position: absolute;
-    left: 250px;
+    left: 220px;
     top: 0;
   }
-}
+  
 
+  }
