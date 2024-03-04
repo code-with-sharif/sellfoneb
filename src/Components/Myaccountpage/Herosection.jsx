@@ -21,6 +21,7 @@ const Herosection = () => {
       >
         <div>
           <Profilecard />
+         
         </div>
         <div>
           <Accountcard />

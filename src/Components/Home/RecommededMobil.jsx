@@ -21,6 +21,7 @@ const RecommededMobil = ({ recomendmobile }) => {
                 <Fragment key={index}>
                   <div className="col mb-4">
                     <Recomendmobilecard
+                    id={item?.id}
                       imgSrc={item?.imgSrc}
                       title={item?.title}
                       price={item?.price}

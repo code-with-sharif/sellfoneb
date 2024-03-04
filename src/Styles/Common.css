@@ -162,7 +162,7 @@ input[type="number"]:focus,
 .group{
   display: flex;
   align-items: center;
-  gap:15px;
+  gap:10px;
 
 }
 
@@ -201,7 +201,19 @@ ul, li {
  
   list-style-type: none; /* Add this line to remove the dots */
 }
-
+/* react toastfy */
+.toastBody {
+  
+  color: #10171D;
+  font-size: 20px;
+}
+.toastProgress {
+  background: #92c43e;
+}
+.form-control{
+  font-size: 18px;
+  height: 50px !important;
+}
 
 @media (max-width: 576px) {
   h1 {

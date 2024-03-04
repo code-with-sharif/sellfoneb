@@ -19,11 +19,11 @@ const Selectedbrandcard = ({
            
         </div>
        
-{/* <div className=" "  style={{border:"2px solid red" }} > */}
+
  
           <hr  className=""   />
         
-{/* // </div> */}
+
 
         <div
           className="d-flex justify-content-between"

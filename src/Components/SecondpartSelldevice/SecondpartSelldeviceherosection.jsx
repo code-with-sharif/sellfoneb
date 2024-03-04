@@ -4,18 +4,16 @@ import Iphonecard from "../../CommonComponents/Iphonecard";
 import Recomendmobilecard from "../../CommonComponents/Recomendmobilecard";
 import productcardimg from "../../Images/Home/RecomendedphoneSection/Rectangle 63 (1).png";
 import Selectedbrandcard from "../../CommonComponents/Selectedbrandcard";
+import { useParams } from "react-router-dom";
 
 const SecondpartSelldeviceherosection = () => {
-  const [phonePrice, setPhonePrice] = useState("PKR 0.00");
 
-  const handlePriceChange = (newPrice) => {
-    setPhonePrice(newPrice);
-  };
+
 
   const recomendmobile = [
     {
       imgSrc: productcardimg,
-      price: phonePrice,
+      price: "PKR 0.00",
       buttonLabel: "Sell My Phone",
     },
   ];
@@ -47,7 +45,7 @@ const SecondpartSelldeviceherosection = () => {
                   storage512GBLabel: "512GB",
                 }}
                 showHorizontalLine={true}
-                onPriceChange={handlePriceChange} // Pass the callback function
+              
               />
             </div>
           </div>
@@ -60,14 +58,12 @@ const SecondpartSelldeviceherosection = () => {
               <div key={index}>
                 <Recomendmobilecard
                   imgSrc={data.imgSrc}
-                  price={data.price}
-                  buttonLabel={data.buttonLabel}
-                  buttonWidth={true}
+                  price={data.price}              
                   priceSize={true}
                 />
               </div>
             ))}
-            {/* Second card */}
+            {/*Selectedbrandcard */}
             <div>
               <Selectedbrandcard selectedBarand={selectedBarand} />
             </div>

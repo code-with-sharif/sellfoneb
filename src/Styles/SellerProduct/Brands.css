@@ -13,6 +13,7 @@
 }
 .labeltitle {
   flex-basis: 31%;
+  /* max-width: 31%; */
 }
 
 
@@ -50,5 +51,8 @@
   }
   .labeltitle {
     flex-basis: 100%;
+  max-width: 100%;
+
+
   }
 }

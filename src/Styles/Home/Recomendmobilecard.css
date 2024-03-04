@@ -24,7 +24,9 @@
   line-height: 1.6;
 }
 
-
+.btn-color{
+border: 2px solid transparent;
+}
 /* Media Query for smaller screens (e.g., mobile devices) */
 @media (min-width: 320px) and (max-width: 375px) {
   .card-body {

@@ -20,6 +20,7 @@ import Adsphonesection from "./Components/Adsphonesection/Adsphonesection";
 import Sellphone from "./Components/Sellphone/Sellphone";
 import Myaccountpage from "./Components/Myaccountpage/Myaccountpage";
 import Myadverts from "./Components/Myaccountpage/Myadverts";
+import Registration from "./Components/Registration/Registration";
  
 
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/registration" element={< Registration />} />
           <Route path="/services" element={<Services />} />
           <Route path="/sellerproduct" element={<Sellerproduct />} />
           <Route path="/secondpartSelldevice" element={<SecondpartSelldevice />} />

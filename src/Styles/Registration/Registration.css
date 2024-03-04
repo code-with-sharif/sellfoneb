@@ -22,5 +22,17 @@
   font-weight: 400;
   line-height: normal;
 }
+.numberprefix{
+  padding: 0.25rem 0.4rem !important;
+}
 
+.input-group-text {
+  padding: 0.25rem 0.75rem;
 
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

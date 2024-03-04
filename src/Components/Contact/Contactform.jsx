@@ -9,6 +9,7 @@ const Contactform = () => {
     phone: "",
     message: "",
   });
+  const [emailError, setEmailError] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -16,6 +17,19 @@ const Contactform = () => {
       ...formData,
       [name]: value,
     });
+
+    if (name === "email") {
+      let validate = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      if(validate.test(value)) {
+        setFormData({
+          ...formData,
+          [name]: value,
+        });
+        setEmailError(""); // Clear error if validation succeeds
+      } else {
+        setEmailError("Please enter a valid email address");
+      }
+    }
   };
 
   const handleSubmit = (e) => {
@@ -28,7 +42,7 @@ const Contactform = () => {
     <section className="" style={{ paddingTop: "60px", paddingBottom: "60px" }}>
       <h1 className=" text-center">
          Contact  
-        <span className="green"> Us</span>
+        <span className="green">Us</span>
       </h1>
 
       <p
@@ -67,6 +81,8 @@ const Contactform = () => {
                       onChange={handleChange}
                       required
                       placeholder="Enter First Name"
+  
+                      style={{border:"1px solid #92c43e"}}
                     />
                   </div>
                 </div>
@@ -91,6 +107,8 @@ const Contactform = () => {
                       onChange={handleChange}
                       required
                       placeholder="Enter Last Name"
+                      style={{border:"1px solid #92c43e"}}
+
                     />
                   </div>
                 </div>
@@ -103,10 +121,11 @@ const Contactform = () => {
                     </span>
                   </label>
                   <div
-                    className="input-group"
+                    className="input-group d-flex flex-column"
                     style={{ caretColor: "#92C43E" }}
                   >
-                    <input
+                   <div>
+                   <input
                       type="email"
                       className="form-control"
                       id="email"
@@ -115,10 +134,19 @@ const Contactform = () => {
                       onChange={handleChange}
                       required
                       placeholder="Enter Email Address"
-                    />
-                  </div>
-                </div>
+                      style={{border:"1px solid #92c43e"}}
 
+
+                    />
+                   </div>
+                    
+                    {/* <p className="mt-1" style={{ color: "red" }}>
+                  {emailError}
+                </p> */}
+                  </div>
+
+                </div>
+  
                 <div className="col-12 col-lg-6">
                   <label htmlFor="phone" className="form-label contactTitle">
                     Phone Number
@@ -139,6 +167,14 @@ const Contactform = () => {
                       onChange={handleChange}
                       required
                       placeholder="Enter Phone Number"
+                      style={{border:"1px solid #92c43e"}}
+                      onKeyPress={(e) => {
+      // Allow only numeric input
+      const pattern = /^[0-9\b]+$/;
+      if (!pattern.test(e.key)) {
+        e.preventDefault();
+      }
+    }}
                     />
                   </div>
                 </div>
@@ -163,6 +199,8 @@ const Contactform = () => {
                       onChange={handleChange}
                       required
                       placeholder="Type Here.."
+                      style={{border:"1px solid #92c43e"}}
+
                     ></textarea>
                   </div>
                 </div>

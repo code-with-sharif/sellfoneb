@@ -3,13 +3,13 @@ import { Card, Button } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import '../Styles/Home/Recomendmobilecard.css'; // Import your CSS file here
 
-function Recomendmobilecard({ imgSrc, title, price, buttonLabel, recomendmobile, buttonWidth,priceSize }) {
+function Recomendmobilecard({ id,imgSrc, title, price, buttonLabel, recomendmobile, buttonWidth,priceSize }) {
   const navigate = useNavigate();
   const location = useLocation();
   const [checkLocation, setCheckLocation] = useState(location.pathname);
 
-  const handleClick = () => {
-    if (checkLocation === '/process') {
+  const handleClick = (id) => {
+    if (checkLocation == '/sellphone') {
       navigate("/secondpartSelldevice");
     }
     window.scrollTo({
@@ -29,13 +29,16 @@ function Recomendmobilecard({ imgSrc, title, price, buttonLabel, recomendmobile,
   }
 
   return (
-    <Card className='card-data'>
-      {imgSrc &&
+    <Card className='card-data'
+    >
+    
+      {
+        imgSrc &&
         <Card.Img
           variant="top"
           src={imgSrc}
-          onClick={handleClick}
-          style={{ cursor: checkLocation === '/process' ? 'pointer' : 'default' }}
+          onClick={()=>handleClick(id)}
+          style={{ cursor: checkLocation === '/sellphone' ? 'pointer' : 'default' }}
         />
       }
 
@@ -43,8 +46,8 @@ function Recomendmobilecard({ imgSrc, title, price, buttonLabel, recomendmobile,
         {title &&
           <Card.Title
             className='recomendedcardtitle'
-            onClick={handleClick}
-            style={{ cursor: checkLocation === '/process' ? 'pointer' : 'default' }}
+            onClick={()=>handleClick(id)}
+            style={{ cursor: checkLocation === '/sellphone' ? 'pointer' : 'default' }}
           >
             {title} {recomendmobile && recomendmobile.title}
           </Card.Title>
@@ -60,7 +63,7 @@ function Recomendmobilecard({ imgSrc, title, price, buttonLabel, recomendmobile,
           <Button
             style={{ border: "none" }}
             onClick={handleButtonClick}
-            className='btn'
+            className='btn btn-color'
             style={{ ...(buttonWidth ? { width: "35%" } : { width: "100%" }) }}  
 
           >

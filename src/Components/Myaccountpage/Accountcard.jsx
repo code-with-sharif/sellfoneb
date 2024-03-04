@@ -11,7 +11,7 @@ const Accountcard = () => {
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     setSelectedFile(file);
-    console.log("Selected file:", file);
+ 
   };
 
   const handleProfileClick = () => {
@@ -46,7 +46,7 @@ const Accountcard = () => {
             <input
               type="file"
               ref={fileInputRef}
-              style={{ display: "none" }}
+              style={{ display: "none",}}
               onChange={handleFileChange}
             />
           </div>
@@ -69,6 +69,7 @@ const Accountcard = () => {
                       onChange={handleInputChange}
                       required
                       placeholder="Enter First Name"
+                      style={{border: "1px solid #92c43e"}}
                     />
                   </div>
                 </div>
@@ -87,6 +88,8 @@ const Accountcard = () => {
                       onChange={handleInputChange}
                       required
                       placeholder="Enter Last Name"
+                      style={{border: "1px solid #92c43e"}}
+
                     />
                   </div>
                 </div>

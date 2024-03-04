@@ -54,6 +54,8 @@ console.log(contactInfo,"contactInfo")
     }}
     required
     placeholder="Enter Phone Number"
+    style={{border: "1px solid #92c43e"}}
+
   />
 </div>
 
@@ -92,6 +94,8 @@ console.log(contactInfo,"contactInfo")
                     onChange={handleChange}
                     required
                     placeholder="Enter Email Address"
+                    style={{border: "1px solid #92c43e"}}
+
                   />
                 </div>
               </div>
