@@ -31,11 +31,11 @@ const ChooseUs = () => {
     <>
       <section style={{paddingTop:"60px", paddingBottom:"60px"}} className="">
         <div className="text-center " >
-          <h1 className=" ">
+          <div className="sellphoneheading">
            Why  
             <span className="green px-1">Choose Us</span>
             ? 
-          </h1>
+          </div>
           <p className="p-lg-0 px-2  mx-auto" style={{marginTop: "15px", maxWidth: "500px"}}>
        At Sellfone.pk, our top priority is the safety and welfare of all mobile phones rehomed through our site.
      </p>

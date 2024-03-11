@@ -9,12 +9,12 @@ const RecommededMobil = ({ recomendmobile }) => {
   return (
     <>
        <div>
-        <h1 className="text-center pb-5">
+        <div className="text-center pb-5 sellphoneheading">
           <span className="green">{mapdata?.firstname}</span> {mapdata?.lastname}
-        </h1>
+        </div>
 
         {/* Card section */}
-        <div className="container">
+        <div className="" style={{width:"90%", margin:"auto"}}>
           <div className="row row-cols-2 row-cols-lg-5">
             {recomendmobile &&
               recomendmobile?.map((item, index) => (

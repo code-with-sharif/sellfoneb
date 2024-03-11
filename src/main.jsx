@@ -6,6 +6,8 @@ import './Styles/Common.css'
 import { BrowserRouter } from "react-router-dom";
 import { ToastContainer, Bounce } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 // Define a custom style for the toast notifications
 const customToastStyle = {

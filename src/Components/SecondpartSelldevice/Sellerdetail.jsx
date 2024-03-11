@@ -28,10 +28,10 @@ const Sellerdetail = () => {
 
     <section style={{paddingTop:"60px" ,paddingBottom:"60px"}}>
     <div className="text-center">
-          <h1 className="">
+          <div className=" sellphoneheading">
          <span className="green px-1">Seller </span>
             Details
-          </h1>
+          </div>
           <p className="p-lg-0 px-2 mx-auto" style={{ marginTop: '15px', maxWidth: '500px' }}>
           Enter a genuine 11 digit mobile no. with format 03XXXXXXXXX. All inquires will come on this number.
           </p>
@@ -54,6 +54,7 @@ const Sellerdetail = () => {
               value={sellerData.sellerName}
               onChange={handleChange}
               required
+              style={{border:"1px solid #92C43E"}}
             />
           </div>
 
@@ -70,6 +71,8 @@ const Sellerdetail = () => {
               value={sellerData.emailAddress}
               onChange={handleChange}
               required
+              style={{border:"1px solid #92C43E"}}
+
             />
           </div>
 
@@ -86,6 +89,8 @@ const Sellerdetail = () => {
               value={sellerData.firstMobileNumber}
               onChange={handleChange}
               required
+              style={{border:"1px solid #92C43E"}}
+
             />
           </div>
 
@@ -101,6 +106,8 @@ const Sellerdetail = () => {
               name="secondMobileNumber"
               value={sellerData.secondMobileNumber}
               onChange={handleChange}
+              style={{border:"1px solid #92C43E"}}
+
             />
           </div>
 

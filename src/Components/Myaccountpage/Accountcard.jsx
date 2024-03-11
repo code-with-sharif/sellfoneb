@@ -34,7 +34,7 @@ const Accountcard = () => {
     <>
       <section className=''>
         <div className='account-card'>
-          <h1>My Account</h1>
+          <div className='sellphoneheading'>My Account</div>
           <hr />
           <h3>General Information</h3>
           <div className="accountprofile position-relative" onClick={handleProfileClick}>

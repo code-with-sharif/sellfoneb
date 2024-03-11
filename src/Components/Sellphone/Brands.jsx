@@ -28,6 +28,8 @@ const Brands = () => {
   const modelList = [
     {
       brand: "Apple",
+      
+      
       models: [
         {
           name: "iPhone X",
@@ -300,6 +302,7 @@ const Brands = () => {
     // samsung
     {
       brand: "Samsung",
+      
       models: [
         {
           name: "Samsung  S21",
@@ -416,7 +419,6 @@ const Brands = () => {
         style={{
           paddingTop: "60px",
           paddingBottom: "0px",
-          border: "2px solid red",
         }}
       >
         <div className="d-flex px-3 gap-3 justify-content-lg-center align-items-start">

@@ -21,10 +21,10 @@ const AccordionSection = ({ customAccordion, questionsigneimg, buttonLabel }) =>
                 : "acordionText  order-lg-1 order-2"
             }
           >
-            <h1 className="">
+            <div className="sellphoneheading">
                Frequently Asked  
-              <span className="green">Questions </span>
-            </h1>
+              <span className="green"> Questions </span>
+            </div>
 
             <p
               className="p-lg-0 px-5 mx-auto"

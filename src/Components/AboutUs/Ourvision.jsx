@@ -5,16 +5,16 @@ const Ourvision = () => {
   return (
     <>
       <section className="aboutvisionbgColor">
-        <section style={{}}>
-          <div className="container">
-            <div className=" row gap-4">
+        <section style={{width:"95%", margin:"auto"}}>
+          <div className="" style={{}} >
+            <div className=" row g-4">
               <div className="col-12 col-lg-6  ">
               <div className="visiontextSection">
 
-              <h1 className=" pb-3">
+              <div className=" sellphoneheading pb-3">
                  Our  
-                  <span className="green">Vision</span>
-                </h1>
+                  <span className="green"> Vision</span>
+                </div>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -36,7 +36,7 @@ const Ourvision = () => {
                 </p>
               </div>
               </div>
-              <div className="col-12 col-lg-4 Ourvisionimg1" style={{ width: "600px" }}>
+              <div className="col-12 col-lg-6 Ourvisionimg1" style={{}}>
                 <div style={{}} className="  mx-auto  ">
                   <img
                     className="img-fluid"

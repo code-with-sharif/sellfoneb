@@ -48,7 +48,7 @@ const Changepassword = () => {
     <>
       <section className="mt-5">
         <div className="password-cord" style={{ caretColor: "#92C43E" }}>
-          <h1>Change Password</h1>
+          <div className="sellphoneheading">Change Password</div>
           <hr />
           <form onSubmit={handleSubmit}>
             {Object.keys(passwords).map((field, index) => (

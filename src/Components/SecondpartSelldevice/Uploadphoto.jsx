@@ -33,19 +33,19 @@ const Uploadphoto = () => {
 
   return (
     <>
-      <section style={{ paddingTop: '60px', paddingBottom: '60px', background: '#F4F9EC', }}>
+      <section style={{ paddingTop: '60px', paddingBottom: '60px', background: '#F4F9EC' }}>
         <div className="text-center">
-          <h1 className="">
+          <div className="sellphoneheading">
             Upload <span className="green px-1">Photos</span>
-          </h1>
+          </div>
           <p className="p-lg-0 px-2 mx-auto" style={{ marginTop: '15px', maxWidth: '500px' }}>
-            Upload at least 8 pictures improves the chances for a quick sale. Photos should be in 'jpeg, jpg, png, gif'
+            Upload at least 8 pictures improves the chances for a quick sale. Photos should be in 'jpeg, jpg, png, '
             format only.
           </p>
         </div>
 
         <div className="container mt-5">
-          <div className="card" style={{ maxWidth: '700px', margin:'auto' }}> {/* Adjust the width here */}
+          <div className="card" style={{ maxWidth: '700px', margin: 'auto' }}> {/* Adjust the width here */}
             <div
               ref={dropAreaRef}
               id="drop-area"
@@ -68,9 +68,10 @@ const Uploadphoto = () => {
                 </div>
                 <i className="bi bi-cloud-arrow-up-fill text-primary" style={{ fontSize: '48px' }}></i>
                 <p className="mt-3">Drag and drop your image here, or <span className='green'>browse</span></p>
-                <p className='' style={{ color: "#A5A7A5" }}>Support JPEG, JPG, PNG, GIF format only.</p>
+                <p className='' style={{ color: "#A5A7A5" }}>Support JPEG, JPG, PNG, format only.</p>
               </div>
             </div>
+           
             <input
               type="file"
               id="fileElem"
@@ -81,6 +82,9 @@ const Uploadphoto = () => {
               onChange={(e) => handleFiles(e.target.files)}
             />
           </div>
+          <div className="text-center mt-5"> {/* Wrap button in a div and center it */}
+              <button className='btn'>Choose Files</button>
+            </div>
         </div>
       </section>
     </>

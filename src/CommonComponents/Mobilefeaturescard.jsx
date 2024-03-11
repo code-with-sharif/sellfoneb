@@ -28,7 +28,7 @@ const Mobilefeaturescard = () => {
   return (
     <>
       <section className=''>
-        <div className='mobilefeatureheader'>
+        <div className='mobilefeatureheader ' style={{}}>
           <h2>Mobile Phone Features</h2>
           <hr className='' />
           <div className="container-fluid">

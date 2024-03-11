@@ -33,12 +33,12 @@ const Sellerproductherosection = ({ title, paragraph, img }) => {
         <div className="container-fluid d-flex justify-content-lg-between flex-lg-nowrap flex-wrap ">
         <div className="d-flex justify-content-center align-content-center">
         <div style={{}} className=" heroheading   ">
-            <h1
+            <div 
               style={{ paddingBottom: "5px" }}
-              className="black"
+              className="black sellphoneheading"
             >
               {title}
-            </h1>
+            </div>
             <p
               style={{ maxWidth: "500px" }}
               className=" text-lg-start text-sm-center text-md-center mx-auto "

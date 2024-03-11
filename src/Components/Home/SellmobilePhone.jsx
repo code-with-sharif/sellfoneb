@@ -27,10 +27,10 @@ const SellmobilePhone = () => {
 
   return (
     <section style={{ paddingTop: "60px", paddingBottom: "60px" }}>
-      <h1 className="text-center">
+      <div className="text-center sellphoneheading">
         <span className="green">Sell </span>
         Your Mobile Phone
-      </h1>
+      </div>
       <p
         className="text-center mx-auto p-lg-0 p-2"
         style={{ marginTop: "15px", maxWidth: "500px" }}

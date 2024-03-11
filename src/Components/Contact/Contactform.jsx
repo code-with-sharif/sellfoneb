@@ -40,10 +40,10 @@ const Contactform = () => {
 
   return (
     <section className="" style={{ paddingTop: "60px", paddingBottom: "60px" }}>
-      <h1 className=" text-center">
+      <div className=" sellphoneheading text-center">
          Contact  
-        <span className="green">Us</span>
-      </h1>
+        <span className="green"> Us</span>
+      </div>
 
       <p
         style={{ marginTop: "15px", maxWidth: "500px" }}

@@ -71,14 +71,18 @@ h6 {
   color: #fff;
   background-color: #92c43e;
 }
-
+.sellphoneheading{
+  font-size: 40px !important;
+  font-family: "Source Serif Pro";
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6;
+}
 button,
 .btn {
   font-size: 16px;
   border-radius: 4px;
-
- 
-  height: 48px;
+   height: 48px;
   background: #92c43e;
   font-family: Roboto;
   color: #fff;

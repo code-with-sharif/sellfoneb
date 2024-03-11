@@ -9,11 +9,11 @@ const Needquestion = () => {
         style={{ backgroundColor: "#F4F9EC", width: "100%", height: "auto" }}
         className="pb-5"
       >
-        <h1 className=" text-center pt-5">
+        <div className=" text-center pt-5  sellphoneheading">
            Question or 
           <span className="green"> Need Help</span>
             ? 
-        </h1>
+        </div>
 
         <p
           style={{ marginTop: "15px", maxWidth: "500px" }}
@@ -40,17 +40,15 @@ const Needquestion = () => {
                   />
                 </div>
               </div>
-              <div className="   p-0 ">
-                {" "}
-               
-                <h3 className=" email-text ">WhatsApp</h3>
+              <div className="   p-0 mt-3">
+             <h3 className=" email-text ">WhatsApp</h3>
                 <p className="email-text">+92 310 7631879</p>
               </div>
             </div>
 
             {/* emailIcon */}
             <div
-  className="needycard col-lg-4 col-4 emailIconcontainer"
+  className="needycard  emailIconcontainer"
   style={{}}
 >
   <div className="bgcirclecallimg">
@@ -63,7 +61,7 @@ const Needquestion = () => {
       />
     </div>
   </div>
-  <div className="  p-0">
+  <div className="  p-0 mt-3">
     {" "}
     <h3 className="">Email Address</h3>
     <p className="email-text">loremipsum123@gmail.com</p>

@@ -75,18 +75,7 @@ export default function MultipleItems() {
           <div>
             <Phonesuccessstory />
           </div>
-          {/* <div>
-            <Phonesuccessstory />
-          </div>
-          <div>
-            <Phonesuccessstory />
-          </div>
-          <div>
-            <Phonesuccessstory />
-          </div>
-          <div>
-            <Phonesuccessstory />
-          </div> */}
+          
         </Slider>
       </div>
     </section>

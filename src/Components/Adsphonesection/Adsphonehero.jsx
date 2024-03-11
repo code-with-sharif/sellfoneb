@@ -6,18 +6,20 @@ import Sellercomments from "../../CommonComponents/Sellercomments";
 import Notificationforadds from "../../CommonComponents/Notificationforadds";
 import Mobiledetailes from "../../CommonComponents/Mobiledetailes";
 import Mobilefeaturescard from "../../CommonComponents/Mobilefeaturescard";
+import Phonepicforsale from "./Phonepicforsale";
 
 const Adsphonehero = () => {
   return (
     <>
       <section className="container-fluid" style={{ width: "90%" }}>
-        <div className="row " style={{ border: "2px solid red" }}>
-          <div className="col-lg-7 col-12 p-0">
+        <div className="row ">
+          <div className="col-lg-6 col-12 p-0">
+            <Phonepicforsale />
             <Mobiledetailes />
             <Mobilefeaturescard />
           </div>
           <div className="col-lg-1"></div>
-          <div className="col-lg-4 col-12 p-0">
+          <div className="col-lg-5 col-12 p-0">
             <Incomecard />
             <Sellerdetailedcard />
             <Sellercomments />

@@ -1,7 +1,7 @@
 .mobiledetailheader {
-    /* width: 50%; */
     height: auto;
-    margin: auto;
+   margin-top: 8%;
+   margin-bottom: 8%;
     padding: 20px;
     border-radius: 7px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust the shadow properties as needed */
@@ -11,11 +11,10 @@
     .mobiledetailheader {
         width: 100%;
         height: auto;
-        margin: auto;
-        padding: 20px;
-        /* margin: ; */
+        margin-top: 8%;
+        margin-bottom: 8%;
+       
         border-radius: 7px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust the shadow properties as needed */
-        /* border: 2px solid red; */
     }
 }

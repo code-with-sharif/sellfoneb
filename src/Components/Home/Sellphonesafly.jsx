@@ -5,13 +5,13 @@ const Sellphonesafly = () => {
   return (
     <>
       <section style={{paddingTop:"60px", paddingBottom:"60px"}}>
-        <div className="container">
-          <div className=" row gap-4">
+        <div className="" style={{width:"90%" , margin:"auto"}}>
+          <div className=" row g-5  "> 
             <div className="col-12 col-lg-6 sellfonetext  ">
-              <h1 className="text-center pb-3">
+              <div className=" pb-3 sellphoneheading">
                  Sell ​​your phone  
-                <span className="green">safely and quickly</span>
-              </h1>
+                <span className="green"> safely and quickly</span>
+              </div>
               <p className="">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -34,7 +34,7 @@ const Sellphonesafly = () => {
                 voluptatem.
               </p>
             </div>
-            <div className="col-12 col-lg-4 sellphoneimg  " style={{width:"600px"}}>
+            <div className="col-12 col-lg-6 sellphoneimg  " style={{width:"px"}}>
                 <div style={{ }} className="  mx-auto  ">
                     <img className="img-fluid" src={sellphone}style={{objectFit:"cover", maxWidth:"100%"}} alt="sell phone image not show" />
                 </div>

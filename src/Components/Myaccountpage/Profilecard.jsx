@@ -65,7 +65,7 @@ const Profilecard = () => {
           <h6 onClick={() => navigate("/myadverts")}>My Adverts</h6>
         </div>
 
-        <div style={{ marginTop: "145px" }}>
+        <div style={{ marginTop: "162px" }}>
           <button className="btn w-100">Sign Out</button>
         </div>
       </section>

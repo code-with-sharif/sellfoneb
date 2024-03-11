@@ -20,12 +20,12 @@ const Contactdetail = () => {
     // Add your logic to handle form submission
     console.log("Submitted:", contactInfo);
   };
-console.log(contactInfo,"contactInfo")
+
   return (
     <>
       <section className="mt-5">
         <div className="contact-card">
-          <h1>Contact Details</h1>
+          <div className="sellphoneheading">Contact Details</div>
           <hr />
 
           <form onSubmit={handleSubmit}>
@@ -104,11 +104,12 @@ console.log(contactInfo,"contactInfo")
                 <button type="submit" className="btn numberbtn">Change </button>
               </div>
             </div>
-          </form>
-
-          <div className="mt-5">
+            <div className="mt-5">
             <button className="btn  confirmationbutton">Confirm Changes</button>
           </div>
+          </form>
+
+        
         </div>
       </section>
     </>

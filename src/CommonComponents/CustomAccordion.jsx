@@ -85,7 +85,7 @@ const CustomAccordion = () => {
                             {/* positive and nagitive signe */}
                             <div className="  acordionsigne">
                               {openAccordionId === item.id ? (
-                                <RxCross2 style={{ marginBottom: "3px" }} />
+                                <RxCross2 style={{ marginBottom: "3px" , }} />
                               ) : (
                                 <FaPlus style={{ marginBottom: "3px" }} />
                               )}

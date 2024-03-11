@@ -22,7 +22,7 @@ const AboutHerosection = ({ heading, paragraph, image }) => {
           <div className="aboutheroimg1 pt-lg-4">
             {" "}
             <img
-              className="img-fluid   "
+              className="img-fluid"
               style={{ maxWidth: "100%", height: "100%", objectFit: "cover", backgroundSize: "cover" }}
               src={image}
               alt=""

@@ -28,7 +28,7 @@ const SecondpartSelldeviceherosection = () => {
       <div className="container ">
         <div className="row gap-lg-0 gap-3" style={{}}>
           <div className="col-lg-7 p-0 m-0 order-1" style={{}}>
-            <h1 className="text-lg-start text-center">iPhone 13</h1>
+            <div className="text-lg-start text-center sellphoneheading">iPhone 13</div>
             <p className="px-2 text-lg-start text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua.

@@ -32,18 +32,18 @@ const Mobiledetailes = () => {
         <div className='mobiledetailheader'>
           <h2>Mobile Phone Details</h2>
           <hr />
-          <div className='container-fluid'>
-            <div className='row row-cols-1 row-cols-lg-2'>
+          <div className='container-fluid  p-0' style={{}}>
+            <div className='row row-cols-1 row-cols-lg-2 p-0 m-0'>
               {mobileDetails.map((detail) => (
                 <div className='col' key={detail.id}>
-                  <div className='d-flex justify-content-between'>
-                    <h6>{detail.label}</h6>
-                    <p>{detail.value}</p>
+                  <div className='d-flex justify-content-between m-0 p-0'>
+                    <h6 className='p-0  m-0' style={{}}>{detail.label}</h6>
+                    <p className='m-0'>{detail.value}</p>
                   </div>
                   {/* Show <hr /> line based on screen size */}
-                  <div className=''>
-                    {windowWidth > 1024
-                      ? detail.id <= 4 && <hr />
+                  <div  style={{}}>
+                    {windowWidth >1024
+                      ? detail.id <= 4 && <hr  />
                       : detail.id <= 5 && <hr />}
                   </div>
                 </div>

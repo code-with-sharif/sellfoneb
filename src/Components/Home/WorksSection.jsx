@@ -6,16 +6,16 @@ const WorksSection = () => {
     <>
       <section className="bgcolor" style={{ paddingTop: "60px", paddingBottom: "60px" }}>
         <div className="mb-5">
-          <h1 className="text-center">
+          <div className="text-center  sellphoneheading">
             How it <span className="green">Works</span>?
-          </h1>
+          </div>
           <p className="workdata mx-auto text-center" style={{ maxWidth: "500px" }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
 
         {/* card section  */}
-        <div className="container">
+        <div className="" style={{width:"90%", margin:"auto"}}>
           <div className="row row-cols-1 row-cols-lg-2 gap-lg-0 gap-4" >
             <div className="col">
               <div className="card p-4" >

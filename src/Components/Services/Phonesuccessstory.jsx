@@ -24,19 +24,24 @@ const PhoneData = [
 
 const Phonesuccessstory = () => {
   return (
-    <section style={{ width: "97%" , margin:"auto" }}>
+    <section style={{ width: "97%", margin: "auto" }}>
       <div className=" ">
         {PhoneData.map((story, index) => (
           <div key={index} className="">
             <MDBCard key={index} className="carouselcard">
               <MDBRow className="g-0">
-                <MDBCol className="border"  >
+                <MDBCol className="border">
                   <MDBCardImage
-                    className="  w-100 h-100"
+                    style={{
+                      backgroundSize: "cover",
+                      position: "center",
+                      maxWidth: "100%",
+                      height: "100%",
+                    }}
+                    className="img-fluid w-100"
                     src={story.image}
                     alt="..."
                     fluid
-                    
                   />
                 </MDBCol>
                 <MDBCol md="8">
