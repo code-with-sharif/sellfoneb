@@ -3,21 +3,13 @@ import Profilecard from "./Profilecard";
 import Accountcard from "./Accountcard";
 import Contactdelail from "./Contactdelail";
 import Changepassword from "./Changepassword";
-
+import '../../Styles/Myaccountpage/Herosection.css'
 const Herosection = () => {
   return (
     <>
       <section
         className="grid-container"
-        style={{
-          paddingTop: "30px",
-          paddingBottom: "60px",
-          width: "92%",
-          margin: "auto",
-          display: "grid",
-          gridTemplateColumns: "1fr 2fr",
-          gap: "0px",
-        }}
+       
       >
         <div>
           <Profilecard />
@@ -29,8 +21,12 @@ const Herosection = () => {
           <Changepassword />
         </div>
       </section>
+      
+        
     </>
   );
 };
 
 export default Herosection;
+
+

@@ -7,7 +7,7 @@ const Profilecard = () => {
   const navigate = useNavigate();
   return (
     <>
-      <section className="d-lg-none">
+      {/* <section className="  d-none">
         <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
           Launch demo modal
         </button>
@@ -18,7 +18,7 @@ const Profilecard = () => {
               <div className="modal-header">
                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <div className=""> {/* Place modal content here */}
+              <div className=""> 
                 <div className="profile-card shadow modal-body">
                   <div className="d-flex gap-3">
                     <div className="profile-photo">
@@ -45,7 +45,7 @@ const Profilecard = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="profile-card shadow d-none d-lg-block"> {/* Show only on large devices */}
         <div className="d-flex gap-3">

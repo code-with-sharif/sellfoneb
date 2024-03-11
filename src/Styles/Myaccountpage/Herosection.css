@@ -1,0 +1,24 @@
+/* Herosection.css */
+
+.grid-container {
+    padding-top: 30px;
+    padding-bottom: 60px;
+    width: 92%;
+    margin: auto;
+    display: grid;
+    gap: 0px;
+  }
+  
+  @media (min-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr; /* One column on medium screens */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .grid-container {
+      width: 92%; /* Adjust width for larger screens */
+      grid-template-columns: 1fr 2fr; /* Two columns on large screens */
+    }
+  }
+  

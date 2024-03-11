@@ -63,7 +63,7 @@ const Contactdetail = () => {
               </div>
 
               <div className="mt-4">
-                <button type="submit" className="btn numberbtn" >Change </button>
+                <button type="submit" className="btn numberbtn" >Change Number </button>
               </div>
             </div>
           </form>
@@ -101,7 +101,7 @@ const Contactdetail = () => {
               </div>
 
               <div className="mt-4 " style={{ }}>
-                <button type="submit" className="btn numberbtn">Change </button>
+                <button type="submit" className="btn numberbtn">Change Email </button>
               </div>
             </div>
             <div className="mt-5">
