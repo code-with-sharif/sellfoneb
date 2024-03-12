@@ -184,7 +184,7 @@ const Buyphonecard = () => {
                   </div>
                 </div>
 
-                <label htmlFor="model" className="pt-4 pb-5 inputlable">
+                <label htmlFor="model" className="py-4 inputlable">
                   Model
                 </label>
                 <div className="d-flex flex-column gap-2">
@@ -435,7 +435,7 @@ const Buyphonecard = () => {
          
     
 
-                <div className="" style={{ paddingTop: "74px" }} >
+                <div className="" style={{ paddingTop: "10px" }} >
                   <button className="btn w-100">Clear Filter</button>
                 </div>
               </form>

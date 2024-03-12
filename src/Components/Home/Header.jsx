@@ -104,7 +104,9 @@ const navigate=useNavigate();
           <div className="dropdown-menu">
             <ul style={{}}>
               {popupLogin && (
-                <li className="dropdown-item" onClick={handleRedirectToPopupRegistration}><Login /></li>
+                <li className="dropdown-item"
+                //  onClick={handleRedirectToPopupRegistration}
+                ><Login /></li>
               )}
 
               <li className="dropdown-item" onClick={handleRedirectToPopupLogin}><Registration /></li>

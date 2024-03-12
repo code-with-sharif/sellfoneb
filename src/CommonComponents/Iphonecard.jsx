@@ -29,55 +29,7 @@ const Iphonecard = ({ labels, showHorizontalLine, show,  }) => {
       [checkboxName]: !prevCheckboxes[checkboxName],
     }));
   
-    // Update the price based on checkbox selection
-    if (checkboxName === "newPhoneCheckbox") {
-      // If "New" checkbox is selected, unselect the "Used" checkbox 
-      if (checkboxes.usedPhoneCheckbox) {
-        setCheckboxes((prevCheckboxes) => ({
-          ...prevCheckboxes,
-          usedPhoneCheckbox: false,
-        }));
-      } 
-    } 
-    else if (checkboxName === "usedPhoneCheckbox") {
-      // If "Used" checkbox is selected, unselect the "New" checkbox and update the price
-      if (checkboxes.newPhoneCheckbox) {
-        setCheckboxes((prevCheckboxes) => ({
-          ...prevCheckboxes,
-          newPhoneCheckbox: false,
-        }));
-      } 
-    } 
-    else if (checkboxName === "storage128GBCheckbox") {
-      // If "128GB" checkbox is selected, unselect other storage checkboxes
-      if (checkboxes.storage256GBCheckbox || checkboxes.storage512GBCheckbox) {
-        setCheckboxes((prevCheckboxes) => ({
-          ...prevCheckboxes,
-          storage256GBCheckbox: false,
-          storage512GBCheckbox: false,
-        }));
-      } 
-    } 
-    else if (checkboxName === "storage256GBCheckbox") {
-      // If "256GB" checkbox is selected, unselect other storage checkboxes
-      if (checkboxes.storage128GBCheckbox || checkboxes.storage512GBCheckbox) {
-        setCheckboxes((prevCheckboxes) => ({
-          ...prevCheckboxes,
-          storage128GBCheckbox: false,
-          storage512GBCheckbox: false,
-        }));
-      } 
-    } 
-    else if (checkboxName === "storage512GBCheckbox") {
-      // If "512GB" checkbox is selected, unselect other storage checkboxes
-      if (checkboxes.storage128GBCheckbox || checkboxes.storage256GBCheckbox) {
-        setCheckboxes((prevCheckboxes) => ({
-          ...prevCheckboxes,
-          storage128GBCheckbox: false,
-          storage256GBCheckbox: false,
-        }));
-      } 
-    }
+   
 
     // if((newPhoneCheckbox || usedPhoneCheckbox) &&(storage128GBCheckbox||storage256GBCheckbox||storage512GBCheckbox)&& (checkLocation === '/secondpartSelldevice')) {
 
@@ -95,7 +47,7 @@ const Iphonecard = ({ labels, showHorizontalLine, show,  }) => {
 
     useEffect(() => {
       if (
-        (checkboxes.newPhoneCheckbox || checkboxes.usedPhoneCheckbox) &&
+        (checkboxes.radionewphone || checkboxes.radiousedphone) &&
         (checkboxes.storage128GBCheckbox ||
           checkboxes.storage256GBCheckbox ||
           checkboxes.storage512GBCheckbox) &&
@@ -103,7 +55,7 @@ const Iphonecard = ({ labels, showHorizontalLine, show,  }) => {
       ) {
         // Navigate to "/editphoneprice" page
         navigate("/editphoneprice");
-  
+    
         // Scroll to top
         window.scrollTo({
           top: 0,
@@ -111,6 +63,7 @@ const Iphonecard = ({ labels, showHorizontalLine, show,  }) => {
         });
       }
     }, [checkboxes, location.pathname, navigate]);
+    
   
   
  
@@ -130,7 +83,7 @@ const Iphonecard = ({ labels, showHorizontalLine, show,  }) => {
         <form>
           <div className="d-flex justify-content-between flex-lg-nowrap flex-wrap gap-lg-0 gap-2">
            
-            <div className="group ">
+             {/* <div className="group ">
             <input  type="checkbox"
                 id="newPhoneCheckbox"
                 name="newPhoneCheckbox"
@@ -142,11 +95,11 @@ const Iphonecard = ({ labels, showHorizontalLine, show,  }) => {
            {labels?.newPhoneLabel}
             
             </label>
-          </div>
+          </div> */}
 
           
 
-            <div className="group">
+            {/* <div className="group">
             <input  type="checkbox"
                 id="usedPhoneCheckbox"
                 name="usedPhoneCheckbox"
@@ -154,22 +107,42 @@ const Iphonecard = ({ labels, showHorizontalLine, show,  }) => {
                 onChange={() => handleCheckboxChange("usedPhoneCheckbox")}
 
              />
-            <label  htmlFor="usedPhoneCheckbox">
-                {labels?.usedPhoneLabel}
-            
-            </label>
-          </div>
+            <label  htmlFor="usedPhoneCheckbox">{labels?.usedPhoneLabel} </label>
+          </div>  */}
+
+<div class="group">
+  <input type="radio" id="radionewphone" name="radio" 
+
+checked={checkboxes.radionewphone}
+                onChange={() => handleCheckboxChange("radionewphone")}
+  />
+  <label for="radionewphone" > {labels?.newPhoneLabel}</label>
+</div>
+<div class="group">
+  <input type="radio" id="radiousedphone" name="radio" 
+
+checked={checkboxes.radiousedphone}
+                onChange={() => handleCheckboxChange("radiousedphone")}
+  />
+  <label for="radiousedphone" >{labels?.usedPhoneLabel} </label>
+</div>
+
+
+
+
+
+          
 
           </div>
           {showHorizontalLine && <hr />}
           <h3>{labels?.storageTitle}</h3>
           <p style={{ color: "#A5A7A5" }}>Select your mobile storage capacity</p>
-          <div className="d-flex justify-content-between">
+          {/* <div className="d-flex justify-content-between">
             
             
             <div className="group">
             <input
-                type="checkbox"
+                type="radio"
                 id="storage128GBCheckbox"
                 name="storage128GBCheckbox"
                 checked={checkboxes.storage128GBCheckbox}
@@ -182,9 +155,10 @@ const Iphonecard = ({ labels, showHorizontalLine, show,  }) => {
                 {labels?.storage128GBLabel}
               </label>
           </div>
+
             <div className="group">
               <input
-                type="checkbox"
+                type="radio"
                 id="storage256GBCheckbox"
                 name="storage256GBCheckbox"
                 checked={checkboxes.storage256GBCheckbox}
@@ -197,9 +171,10 @@ const Iphonecard = ({ labels, showHorizontalLine, show,  }) => {
                 {labels?.storage256GBLabel}
               </label>
             </div>
+
             <div className="group">
               <input
-                type="checkbox"
+                type="radio"
                 id="storage512GBCheckbox"
                 name="storage512GBCheckbox"
                 checked={checkboxes.storage512GBCheckbox}
@@ -212,7 +187,51 @@ const Iphonecard = ({ labels, showHorizontalLine, show,  }) => {
                 {labels?.storage512GBLabel}
               </label>
             </div>
-          </div>
+
+          </div> */}
+
+  {/* storage of phone */}
+          <div className="d-flex justify-content-between">
+  <div className="group">
+    <input
+      type="radio"
+      id="storage128GBCheckbox"
+      name="storageCheckbox"
+      checked={checkboxes.storage128GBCheckbox}
+      onChange={() => handleCheckboxChange("storage128GBCheckbox")}
+    />
+    <label htmlFor="storage128GBCheckbox">
+      {labels?.storage128GBLabel}
+    </label>
+  </div>
+
+  <div className="group">
+    <input
+      type="radio"
+      id="storage256GBCheckbox"
+      name="storageCheckbox"
+      checked={checkboxes.storage256GBCheckbox}
+      onChange={() => handleCheckboxChange("storage256GBCheckbox")}
+    />
+    <label htmlFor="storage256GBCheckbox">
+      {labels?.storage256GBLabel}
+    </label>
+  </div>
+
+  <div className="group">
+    <input
+      type="radio"
+      id="storage512GBCheckbox"
+      name="storageCheckbox"
+      checked={checkboxes.storage512GBCheckbox}
+      onChange={() => handleCheckboxChange("storage512GBCheckbox")}
+    />
+    <label htmlFor="storage512GBCheckbox">
+      {labels?.storage512GBLabel}
+    </label>
+  </div>
+</div> 
+
           {/* Condition of your iPhone 13? */}
           {show && showHorizontalLine && <hr />}
           <h3>{labels?.phoneTitle}</h3>
@@ -295,11 +314,11 @@ const Iphonecard = ({ labels, showHorizontalLine, show,  }) => {
           {/* Does your battery have a maximum capacity of 85%? */}
           {show && showHorizontalLine && <hr />}
           <h3>{labels?.batteryTitle}</h3>
-         <div className="d-flex  align-items-center justify-content-between gap-lg-5  gap-2 flex-lg-nowrap flex-wrap">
+         {/* <div className="d-flex  align-items-center justify-content-between gap-lg-5  gap-2 flex-lg-nowrap flex-wrap">
          <div className="d-flex  align-items-center gap-5">
          <div  className="group">
                   <input
-                    type="checkbox"
+                    type="radio"
                     id="batterycapacitygoodCheckbox"
                     name="batterycapacitygoodCheckbox"
                     checked={checkboxes.batterycapacitygoodCheckbox}
@@ -314,7 +333,7 @@ const Iphonecard = ({ labels, showHorizontalLine, show,  }) => {
          <div className="d-flex  align-items-center gap-5">
          <div  className="group">
                   <input
-                    type="checkbox"
+                      type="radio"
                     id="batterycapacitybadCheckbox"
                     name="batterycapacitybadCheckbox"
                     checked={checkboxes.batterycapacitybad}
@@ -326,15 +345,49 @@ const Iphonecard = ({ labels, showHorizontalLine, show,  }) => {
                 </div>
                 <div>{labels?.batterycapacitybadprice}</div> 
          </div>
-         </div>
+         </div> */}
+         <div className="d-flex align-items-center justify-content-between gap-lg-5 gap-2 flex-lg-nowrap flex-wrap">
+  <div className="d-flex align-items-center gap-5">
+    <div className="group">
+      <input
+        type="radio"
+        id="batterycapacitygoodCheckbox"
+        name="batterycapacityCheckbox"
+        checked={checkboxes.batterycapacitygoodCheckbox}
+        onChange={() => handleCheckboxChange("batterycapacitygoodCheckbox")}
+      />
+      <label htmlFor="batterycapacitygoodCheckbox">
+        {labels?.batterycapacitygood}
+      </label>
+    </div>
+    <div>{labels?.batterycapacitygoodprice}</div>
+  </div>
+  <div className="d-flex align-items-center gap-5">
+    <div className="group">
+      <input
+        type="radio"
+        id="batterycapacitybadCheckbox"
+        name="batterycapacityCheckbox"
+        checked={checkboxes.batterycapacitybad}
+        onChange={() => handleCheckboxChange("batterycapacitybad")}
+      />
+      <label htmlFor="batterycapacitybad">
+        {labels?.batterycapacitybad}
+      </label>
+    </div>
+    <div>{labels?.batterycapacitybadprice}</div>
+  </div>
+</div>
+
          {show && showHorizontalLine && <hr />}
          <h3>{labels?.chargcabletittle}</h3>
 
-         <div className="d-flex  align-items-center justify-content-between gap-lg-5  gap-2 flex-lg-nowrap flex-wrap ">
+
+         {/* <div className="d-flex  align-items-center justify-content-between gap-lg-5  gap-2 flex-lg-nowrap flex-wrap ">
          <div className="d-flex  align-items-center gap-5">
          <div  className="group">
                   <input
-                    type="checkbox"
+                    type="radio"
                     id="chargcablegoodCheckbox"
                     name="chargcablegoodCheckbox"
                     checked={checkboxes.chargcablegoodCheckbox}
@@ -349,7 +402,7 @@ const Iphonecard = ({ labels, showHorizontalLine, show,  }) => {
          <div className="d-flex  align-items-center gap-5">
          <div  className="group">
                   <input
-                    type="checkbox"
+                    type="radio"
                     id="chargcablebadCheckbox"
                     name="chargcablebadCheckbox"
                     checked={checkboxes.chargcablebad}
@@ -361,15 +414,50 @@ const Iphonecard = ({ labels, showHorizontalLine, show,  }) => {
                 </div>
                 <div>{labels?.chargcablebadprice}</div> 
          </div>
-         </div>
+         </div> */}
+         <div className="d-flex align-items-center justify-content-between gap-lg-5 gap-2 flex-lg-nowrap flex-wrap">
+  <div className="d-flex align-items-center gap-5">
+    <div className="group">
+      <input
+        type="radio"
+        id="chargcablegoodCheckbox"
+        name="chargcableCheckbox"
+        checked={checkboxes.chargcablegoodCheckbox}
+        onChange={() => handleCheckboxChange("chargcablegoodCheckbox")}
+      />
+      <label htmlFor="chargcablegoodCheckbox">
+        {labels?.chargcablegood}
+      </label>
+    </div>
+    <div>{labels?.chargcablegoodprice}</div>
+  </div>
+  <div className="d-flex align-items-center gap-5">
+    <div className="group">
+      <input
+        type="radio"
+        id="chargcablebadCheckbox"
+        name="chargcableCheckbox"
+        checked={checkboxes.chargcablebad}
+        onChange={() => handleCheckboxChange("chargcablebad")}
+      />
+      <label htmlFor="chargcablebad">
+        {labels?.chargcablebad}
+      </label>
+    </div>
+    <div>{labels?.chargcablebadprice}</div>
+  </div>
+</div>
+
+
+
          {show && showHorizontalLine && <hr />}
          <h3>{labels?.cracklingcallTittle}</h3>
 
-         <div className="d-flex  align-items-center justify-content-between gap-lg-5  gap-2 flex-lg-nowrap flex-wrap">
+         {/* <div className="d-flex  align-items-center justify-content-between gap-lg-5  gap-2 flex-lg-nowrap flex-wrap">
          <div className="d-flex  align-items-center gap-5">
          <div  className="group">
                   <input
-                    type="checkbox"
+                  type="radio"
                     id="cracklingcallgoodCheckbox"
                     name="cracklingcallgoodCheckbox"
                     checked={checkboxes.cracklingcallgoodCheckbox}
@@ -384,7 +472,7 @@ const Iphonecard = ({ labels, showHorizontalLine, show,  }) => {
          <div className="d-flex  align-items-center gap-5">
          <div  className="group">
                   <input
-                    type="checkbox"
+                    type="radio"
                     id="cracklingcallbadCheckbox"
                     name="cracklingcallbadCheckbox"
                     checked={checkboxes.cracklingcallbad}
@@ -396,16 +484,49 @@ const Iphonecard = ({ labels, showHorizontalLine, show,  }) => {
                 </div>
                 <div>{labels?.cracklingcallbadprice}</div> 
          </div>
-         </div>
+         </div> */}
+         <div className="d-flex align-items-center justify-content-between gap-lg-5 gap-2 flex-lg-nowrap flex-wrap">
+  <div className="d-flex align-items-center gap-5">
+    <div className="group">
+      <input
+        type="radio"
+        id="cracklingcallgoodCheckbox"
+        name="cracklingcallCheckbox"
+        checked={checkboxes.cracklingcallgoodCheckbox}
+        onChange={() => handleCheckboxChange("cracklingcallgoodCheckbox")}
+      />
+      <label htmlFor="cracklingcallgoodCheckbox">
+        {labels?.cracklingcallgood}
+      </label>
+    </div>
+    <div>{labels?.cracklingcallgoodprice}</div>
+  </div>
+  <div className="d-flex align-items-center gap-5">
+    <div className="group">
+      <input
+        type="radio"
+        id="cracklingcallbadCheckbox"
+        name="cracklingcallCheckbox"
+        checked={checkboxes.cracklingcallbad}
+        onChange={() => handleCheckboxChange("cracklingcallbad")}
+      />
+      <label htmlFor="cracklingcallbad">
+        {labels?.cracklingcallbad}
+      </label>
+    </div>
+    <div>{labels?.cracklingcallbadprice}</div>
+  </div>
+</div>
+
          {show && showHorizontalLine && <hr />}
          <h3>{labels?.camerabrokenTittle}</h3>
 
 
-         <div className="d-flex  align-items-center justify-content-between gap-lg-5  gap-2 flex-lg-nowrap flex-wrap ">
+         {/* <div className="d-flex  align-items-center justify-content-between gap-lg-5  gap-2 flex-lg-nowrap flex-wrap ">
          <div className="d-flex  align-items-center gap-5">
          <div  className="group">
                   <input
-                    type="checkbox"
+                    type="radio"
                     id="camerabrokenCheckbox"
                     name="camerabrokenCheckbox"
                     checked={checkboxes.camerabrokenCheckbox}
@@ -420,7 +541,7 @@ const Iphonecard = ({ labels, showHorizontalLine, show,  }) => {
          <div className="d-flex  align-items-center gap-5">
          <div  className="group">
                   <input
-                    type="checkbox"
+                    type="radio"
                     id="NocamerabrokenCheckbox"
                     name="NocamerabrokenCheckbox"
                     checked={checkboxes.Nocamerabroken}
@@ -432,16 +553,49 @@ const Iphonecard = ({ labels, showHorizontalLine, show,  }) => {
                 </div>
                 <div>{labels?.camerabrokenbadprice}</div> 
          </div>
-         </div>
+         </div> */}
+         <div className="d-flex align-items-center justify-content-between gap-lg-5 gap-2 flex-lg-nowrap flex-wrap">
+  <div className="d-flex align-items-center gap-5">
+    <div className="group">
+      <input
+        type="radio"
+        id="camerabrokenCheckbox"
+        name="camerabrokenGroup"
+        checked={checkboxes.camerabrokenCheckbox}
+        onChange={() => handleCheckboxChange("camerabrokenCheckbox")}
+      />
+      <label htmlFor="camerabrokenCheckbox">
+        {labels?.camerabroken}
+      </label>
+    </div>
+    <div>{labels?.camerabrokengoodprice}</div>
+  </div>
+  <div className="d-flex align-items-center gap-5">
+    <div className="group">
+      <input
+        type="radio"
+        id="NocamerabrokenCheckbox"
+        name="camerabrokenGroup"
+        checked={checkboxes.Nocamerabroken}
+        onChange={() => handleCheckboxChange("Nocamerabroken")}
+      />
+      <label htmlFor="NocamerabrokenCheckbox">
+        {labels?.Nocamerabroken}
+      </label>
+    </div>
+    <div>{labels?.camerabrokenbadprice}</div>
+  </div>
+</div>
+
          {show && showHorizontalLine && <hr />}
          <h3>{labels?.iphonenotificationTittle}</h3>
         
- 
+{/*  
          <div className="d-flex  align-items-center justify-content-between gap-lg-5  gap-2 flex-lg-nowrap flex-wrap">
          <div className="d-flex  align-items-center gap-5">
          <div  className="group">
                   <input
-                    type="checkbox"
+                    type="radio"
                     id="iphonenotificationCheckbox"
                     name="iphonenotificationCheckbox"
                     checked={checkboxes.iphonenotificationCheckbox}
@@ -456,7 +610,7 @@ const Iphonecard = ({ labels, showHorizontalLine, show,  }) => {
          <div className="d-flex  align-items-center gap-5">
          <div  className="group">
                   <input
-                    type="checkbox"
+                    type="radio"
                     id="NoiphonenotificationCheckbox"
                     name="NoiphonenotificationCheckbox"
                     checked={checkboxes.Noiphonenotification}
@@ -468,15 +622,49 @@ const Iphonecard = ({ labels, showHorizontalLine, show,  }) => {
                 </div>
                 <div>{labels?.iphonenotificationbadprice}</div> 
          </div>
-         </div> 
+         </div>  */}
+
+         <div className="d-flex align-items-center justify-content-between gap-lg-5 gap-2 flex-lg-nowrap flex-wrap">
+  <div className="d-flex align-items-center gap-5">
+    <div className="group">
+      <input
+        type="radio"
+        id="iphonenotificationCheckbox"
+        name="iphonenotificationGroup"
+        checked={checkboxes.iphonenotificationCheckbox}
+        onChange={() => handleCheckboxChange("iphonenotificationCheckbox")}
+      />
+      <label htmlFor="iphonenotificationCheckbox">
+        {labels?.iphonenotification}
+      </label>
+    </div>
+    <div>{labels?.iphonenotificationgoodprice}</div>
+  </div>
+  <div className="d-flex align-items-center gap-5">
+    <div className="group">
+      <input
+        type="radio"
+        id="NoiphonenotificationCheckbox"
+        name="iphonenotificationGroup"
+        checked={checkboxes.Noiphonenotification}
+        onChange={() => handleCheckboxChange("Noiphonenotification")}
+      />
+      <label htmlFor="NoiphonenotificationCheckbox">
+        {labels?.Noiphonenotification}
+      </label>
+    </div>
+    <div>{labels?.iphonenotificationbadprice}</div>
+  </div>
+</div>
+
          {show && showHorizontalLine && <hr />}
          <h3>{labels?.orignlechargerTittle}</h3>
 
-         <div className="d-flex  align-items-center justify-content-between gap-lg-5  gap-2 flex-lg-nowrap flex-wrap">
+         {/* <div className="d-flex  align-items-center justify-content-between gap-lg-5  gap-2 flex-lg-nowrap flex-wrap">
          <div className="d-flex  align-items-center gap-5">
          <div  className="group">
                   <input
-                    type="checkbox"
+                    type="radio"
                     id="orignlechargerCheckbox"
                     name="orignlechargerCheckbox"
                     checked={checkboxes.orignlechargerCheckbox}
@@ -491,7 +679,7 @@ const Iphonecard = ({ labels, showHorizontalLine, show,  }) => {
          <div className="d-flex  align-items-center gap-5">
          <div  className="group">
                   <input
-                    type="checkbox"
+                    type="radio"
                     id="NoorignlechargerCheckbox"
                     name="NoorignlechargerCheckbox"
                     checked={checkboxes.Noorignlecharger}
@@ -503,7 +691,39 @@ const Iphonecard = ({ labels, showHorizontalLine, show,  }) => {
                 </div>
                 <div>{labels?.orignlechargerbadprice}</div> 
          </div>
+         </div>  */}
+         <div className="d-flex  align-items-center justify-content-between gap-lg-5  gap-2 flex-lg-nowrap flex-wrap">
+         <div className="d-flex  align-items-center gap-5">
+         <div  className="group">
+                  <input
+                    type="radio"
+                    id="orignlechargerCheckbox"
+                    name="orignlechargerGroup"
+                    checked={checkboxes.orignlechargerCheckbox}
+                    onChange={() => handleCheckboxChange("orignlechargerCheckbox")}
+                  />
+                  <label htmlFor="orignlecharger" >
+                    {labels?.orignlecharger}
+                  </label>
+                </div>
+                <div>{labels?.orignlechargergoodprice}</div> 
          </div>
+         <div className="d-flex  align-items-center gap-5">
+         <div  className="group">
+                  <input
+                    type="radio"
+                    id="NoorignlechargerCheckbox"
+                    name="orignlechargerGroup"
+                    checked={checkboxes.Noorignlecharger}
+                    onChange={() => handleCheckboxChange("Noorignlecharger")}
+                  />
+                  <label htmlFor="Noorignlecharger" >
+                    {labels?.Noorignlecharger}
+                  </label>
+                </div>
+                <div>{labels?.orignlechargerbadprice}</div> 
+         </div>
+         </div> 
 
             </>
           )}

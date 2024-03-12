@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import Iphonecard from "./../../CommonComponents/Iphonecard";
 import Recomendmobilecard from "../../CommonComponents/Recomendmobilecard";
 import Selectedbrandcard from "../../CommonComponents/Selectedbrandcard";
 import productcardimg from "../../Images/Home/RecomendedphoneSection/Rectangle 63 (1).png";
 
 const Editphonepriceherosection = () => {
+
+  // const [payment, setPayment] = useState(0);
+
+  // const updatePrice = (newPrice) => {
+  //   setPayment(newPrice);
+  // };
+
+
+
   const recomendmobile = [
     {
       imgSrc: productcardimg,
@@ -99,12 +108,10 @@ const Editphonepriceherosection = () => {
             <div className="col-lg-5 d-flex flex-column gap-4">
               {recomendmobile?.map((data, index) => (
                 <div key={index}>
-                  <Recomendmobilecard
+                   <Recomendmobilecard
                     imgSrc={data.imgSrc}
                     price={data.price}
-                    // buttonLabel={data.buttonLabel}
                     Editpricebtn={data.Editpricebtn}
-
                     buttonWidth={true}
                     priceSize={true}
                   />
